@@ -1,3 +1,4 @@
+import AboutSection from "components/home/AboutSection";
 import CallBackSection from "components/home/CallBackSection";
 import Hero from "components/home/Hero";
 import Services from "components/home/Services";
@@ -9,6 +10,7 @@ const page = () => {
       <Hero />
       <Services />
       <CallBackSection />
+      <AboutSection />
     </div>
   );
 };
