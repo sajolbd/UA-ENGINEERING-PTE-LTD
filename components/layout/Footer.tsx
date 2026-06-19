@@ -23,28 +23,28 @@ const quickLinks = [
 
 const services = [
   {
-    label: "Renovation Services",
-    href: "/services/renovation-services",
+    label: "Renovation & Upgrading",
+    href: "/#services",
   },
   {
-    label: "Roof Installation",
-    href: "/services/roof-installation",
+    label: "Structural & Exterior Works",
+    href: "/#services",
   },
   {
-    label: "Waterproofing Services",
-    href: "/services/waterproofing-services",
+    label: "Painting & Waterproofing",
+    href: "/#services",
   },
   {
-    label: "Awning & Canopy Services",
-    href: "/services/awning-canopy-services",
+    label: "Aluminium & Glazing Works",
+    href: "/#services",
   },
   {
-    label: "Painting Services",
-    href: "/services/painting-services",
+    label: "Electrical, Plumbing & Aircon",
+    href: "/#services",
   },
   {
-    label: "Electrical & Plumbing",
-    href: "/services/electrical-plumbing",
+    label: "Solar Panel Installation",
+    href: "/#services",
   },
 ];
 
@@ -164,7 +164,7 @@ export default function Footer() {
               <div>
                 <p className="mb-1 font-medium text-white">Address</p>
 
-                <p>
+                <p className="text-xs leading-6">
                   38C SEA AVENUE
                   <br />
                   MARINE MANSION
@@ -236,8 +236,8 @@ export default function Footer() {
         <Container>
           <div className="flex flex-col items-center justify-between gap-3 py-5 text-center text-sm text-white/70 md:flex-row">
             <p>
-              © {new Date().getFullYear()} UA Engineering PTE. LTD. All Rights
-              Reserved.
+              &copy; {new Date().getFullYear()} UA Engineering PTE. LTD. All
+              Rights Reserved.
             </p>
 
             <div className="flex flex-wrap items-center gap-5">
@@ -255,4 +255,3 @@ export default function Footer() {
     </footer>
   );
 }
-
