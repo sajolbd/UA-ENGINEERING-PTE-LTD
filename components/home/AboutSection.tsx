@@ -71,7 +71,7 @@ export default function AboutSection() {
                         </div>
 
                         {/* Main Title */}
-                        <h2 className="mb-6 text-3xl font-bold leading-tight text-secondary xl:text-5xl">
+                        <h2 className="mb-6 text-3xl font-bold leading-tight text-secondary ">
                             Your Trusted Partner for High Quality
                             Renovation & Upgrading Services.
                         </h2>

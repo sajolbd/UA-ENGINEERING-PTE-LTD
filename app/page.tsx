@@ -9,6 +9,7 @@ import Services from "components/home/Services";
 import WhyRely from "components/home/WhyRely";
 import WhyChoose from "components/home/WhyChoose";
 import Testimonial from "components/home/Testimonial";
+import Review from "components/home/Review";
 
 const page = () => {
   return (
@@ -23,6 +24,7 @@ const page = () => {
       <WhyRely />
       <WhyChoose />
       <Testimonial />
+      <Review />
     </div>
   );
 };
