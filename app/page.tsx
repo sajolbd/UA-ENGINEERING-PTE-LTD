@@ -8,6 +8,7 @@ import React from "react";
 import Services from "components/home/Services";
 import WhyRely from "components/home/WhyRely";
 import WhyChoose from "components/home/WhyChoose";
+import Testimonial from "components/home/Testimonial";
 
 const page = () => {
   return (
@@ -21,6 +22,7 @@ const page = () => {
       <WorkingProcess />
       <WhyRely />
       <WhyChoose />
+      <Testimonial />
     </div>
   );
 };
