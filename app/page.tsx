@@ -6,6 +6,7 @@ import CompletedProjects from "components/home/CompletedProjects";
 import WorkingProcess from "components/home/WorkingProcess";
 import React from "react";
 import Services from "components/home/Services";
+import WhyRely from "components/home/WhyRely";
 
 const page = () => {
   return (
@@ -17,8 +18,7 @@ const page = () => {
       <Service />
       <CompletedProjects />
       <WorkingProcess />
-
-
+      <WhyRely />
     </div>
   );
 };
