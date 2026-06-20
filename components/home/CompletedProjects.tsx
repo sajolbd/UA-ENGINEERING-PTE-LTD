@@ -43,13 +43,13 @@ const projects = [
   {
     title: "Controlled Concrete Demolition",
     category: "Hacking & Demolition",
-    image: "/images/home/projects/project-demolition.jpg",
+    image: "/images/home/projects/project-demolition.png",
     alt: "Controlled hacking and demolition of reinforced concrete wall",
   },
   {
     title: "Suspended Cove Ceiling Grid System",
     category: "False Ceiling",
-    image: "/images/home/projects/project-ceiling.jpg",
+    image: "/images/home/projects/project-ceiling.png",
     alt: "Suspended false ceiling installation with cove lighting channels",
   },
 ];
