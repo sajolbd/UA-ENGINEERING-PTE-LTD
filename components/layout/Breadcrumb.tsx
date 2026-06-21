@@ -36,13 +36,6 @@ export default function Breadcrumb({
           <h1 className="text-3xl sm:text-4xl  font-extrabold text-white tracking-tight leading-none uppercase">
             {title}
           </h1>
-
-          {/* Optional Description */}
-          {description && (
-            <p className="mt-3 text-xs sm:text-sm text-slate-200 font-medium leading-relaxed max-w-md mx-auto">
-              {description}
-            </p>
-          )}
         </div>
       </Container>
     </section>

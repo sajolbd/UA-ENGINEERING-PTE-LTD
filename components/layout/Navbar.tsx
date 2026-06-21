@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, Mail, X } from "lucide-react";
+import { Menu, Phone, Mail, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import Container from "components/shared/Container";
 import Image from "next/image";
+import { servicesData } from "../../data/servicesData";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -17,6 +18,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const pathname = usePathname();
 
   const isActiveLink = (href: string) =>
@@ -95,6 +97,38 @@ export default function Navbar() {
               {navLinks.map((item) => {
                 const isActive = isActiveLink(item.href);
 
+                if (item.label === "Services") {
+                  return (
+                    <div key={item.label} className="group relative py-6">
+                      <Link
+                        href={item.href}
+                        aria-current={isActive ? "page" : undefined}
+                        className={`nav-link font-medium flex items-center gap-1 ${
+                          isActive ? "nav-link-active" : "text-gray-700"
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown size={14} className="transition-transform duration-300 group-hover:rotate-180" />
+                      </Link>
+
+                      {/* Dropdown Menu */}
+                      <div className="absolute top-[80%] left-1/2 -translate-x-1/2 mt-2 w-64 rounded-2xl bg-white border border-slate-100 p-2 shadow-xl opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+                        <div className="flex flex-col gap-0.5">
+                          {servicesData.map((category) => (
+                            <Link
+                              key={category.slug}
+                              href={`/services/${category.slug}`}
+                              className="rounded-xl px-4 py-2.5 text-xs sm:text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-primary transition-all duration-200"
+                            >
+                              {category.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={item.label}
@@ -159,6 +193,54 @@ export default function Navbar() {
           <div className="flex flex-col px-5 pt-2">
             {navLinks.map((item) => {
               const isActive = isActiveLink(item.href);
+
+              if (item.label === "Services") {
+                return (
+                  <div key={item.label} className="border-b py-1">
+                    <div className="flex items-center justify-between py-2">
+                      <Link
+                        href={item.href}
+                        aria-current={isActive ? "page" : undefined}
+                        className={`nav-link font-medium ${
+                          isActive ? "nav-link-active" : "text-gray-700"
+                        }`}
+                        onClick={() => setOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                        className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-gray-500 border border-slate-100"
+                      >
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform duration-300 ${
+                            mobileServicesOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    {/* Expandable sub-list */}
+                    <div
+                      className={`overflow-hidden transition-all duration-300 flex flex-col pl-4 gap-1 ${
+                        mobileServicesOpen ? "max-h-[300px] pb-3 pt-1" : "max-h-0"
+                      }`}
+                    >
+                      {servicesData.map((category) => (
+                        <Link
+                          key={category.slug}
+                          href={`/services/${category.slug}`}
+                          className="py-2 text-xs sm:text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                          onClick={() => setOpen(false)}
+                        >
+                          {category.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
 
               return (
                 <Link
