@@ -20,7 +20,7 @@ const highlights = [
 export default function Hero() {
   return (
     <div className="bg-white">
-      <section className="relative overflow-hidden bg-white lg:h-[calc(100vh-132px)] py-6 sm:py-10 lg:py-0">
+      <section className="relative overflow-hidden bg-white lg:min-h-[calc(100vh-132px)] flex items-center py-10 sm:py-16 lg:py-24">
         <Image
           src="/images/home/hero/hero-bg.png"
           alt=""
@@ -33,8 +33,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-[#eef5ff]/45 to-white/80" />
         <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-transparent to-white/35" />
 
-        <Container className="relative flex flex-col gap-4 lg:h-full lg:gap-0 lg:py-0">
-          <div className="mx-auto w-full max-w-[1320px] pt-4 text-center sm:pt-6 lg:pt-20 xl:pt-24">
+        <Container className="relative flex flex-col justify-center gap-6 lg:gap-8 w-full h-full">
+          <div className="mx-auto w-full max-w-[1320px] pt-4 text-center sm:pt-6 lg:pt-12 xl:pt-16">
             <h1 className="mx-auto max-w-[1240px] text-3xl font-bold leading-[1.02] text-secondary sm:text-5xl">
               From Renovation to Painting, Roofing, Electrical, Plumbing and
               Steel Works.
@@ -46,7 +46,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="mx-auto mt-6 flex w-full max-w-[1160px] justify-between items-center gap-4 sm:mt-9 lg:mt-14 lg:pb-36 xl:mt-16 xl:pb-40 px-4 sm:px-0">
+          <div className="mx-auto mt-6 flex flex-wrap w-full max-w-[1160px] justify-between items-center gap-4 sm:mt-8 lg:mt-10 px-4 sm:px-0">
             <a
               href="https://wa.me/6598411786?text=Hello%20UA%20Engineering%2C%20I%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
@@ -71,7 +71,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="relative mx-auto mt-8 sm:mt-12 grid w-full max-w-[1160px] grid-cols-2 gap-2 rounded-[22px] bg-white/88 p-2 shadow-[0_18px_55px_rgba(15,23,42,0.18)] backdrop-blur sm:gap-3 sm:rounded-[34px] sm:p-3 lg:absolute lg:inset-x-4 lg:bottom-6 lg:grid-cols-4">
+          <div className="relative mx-auto mt-8 sm:mt-12 lg:mt-16 grid w-full max-w-[1160px] grid-cols-2 gap-2 rounded-[22px] bg-white/88 p-2 shadow-[0_18px_55px_rgba(15,23,42,0.18)] backdrop-blur sm:gap-3 sm:rounded-[34px] sm:p-3 lg:grid-cols-4">
             {highlights.map(({ label, icon: Icon }) => (
               <div
                 key={label}
