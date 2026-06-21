@@ -121,7 +121,7 @@ export default function ServiceCategoryPage({ params }: PageProps) {
               {category.services.map((service, index) => (
                 <div
                   key={service.title}
-                  className="group relative bg-white border border-slate-100/80 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl flex flex-col h-full"
+                  className="group relative bg-white border border-slate-100/80 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 ease-in-out hover:-translate-y-2 hover:bg-primary hover:border-transparent hover:shadow-2xl flex flex-col h-full"
                 >
                   {/* Card Image */}
                   <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-50 border-b border-slate-100">
@@ -139,45 +139,42 @@ export default function ServiceCategoryPage({ params }: PageProps) {
                     </div>
                   </div>
 
-                  <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                    <div className="flex-grow">
-                      <h4 className="text-xl sm:text-2xl font-extrabold text-secondary mb-3 transition-colors duration-300 group-hover:text-primary">
-                        {service.title}
-                      </h4>
-                      <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                        {service.description}
-                      </p>
+                    <div className="p-4 sm:p-5 flex flex-col flex-grow">
+                      <div className="flex-grow">
+                        <h4 className="text-xl sm:text-2xl font-extrabold text-secondary mb-3 transition-colors duration-500 group-hover:text-white">
+                          {service.title}
+                        </h4>
+                        <p className="text-slate-600 text-sm leading-relaxed mb-3 transition-colors duration-500 group-hover:text-white/80">
+                          {service.description}
+                        </p>
 
-                      {service.features && service.features.length > 0 && (
-                        <div className="mb-4">
-                          <h5 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                            Key Specifications:
-                          </h5>
-                          <ul className="grid grid-cols-1 gap-1.5">
-                            {service.features.slice(0, 3).map((feat) => (
-                              <li key={feat} className="flex items-start gap-2 text-xs text-slate-600 font-semibold">
-                                <CheckCircle2 size={14} className="text-primary mt-0.5 shrink-0" />
-                                <span>{feat}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
+                        {service.features && service.features.length > 0 && (
+                          <div className="mb-4">
+                            <h5 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2 transition-colors duration-500 group-hover:text-white/60">
+                              Key Specifications:
+                            </h5>
+                            <ul className="grid grid-cols-1 gap-1.5">
+                              {service.features.slice(0, 3).map((feat) => (
+                                <li key={feat} className="flex items-start gap-2 text-xs text-slate-600 font-semibold transition-colors duration-500 group-hover:text-white/90">
+                                  <CheckCircle2 size={14} className="text-primary shrink-0 mt-0.5 transition-colors duration-500 group-hover:text-white" />
+                                  <span>{feat}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
 
                     <div className="border-t border-slate-100 pt-3 mt-auto">
                       <Link
                         href={`/services/${category.slug}/${service.slug}`}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl hover:shadow-secondary/20"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all duration-500 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl hover:shadow-secondary/20 group-hover:bg-white group-hover:text-primary group-hover:shadow-none"
                       >
                         <span>Learn More & Specifications</span>
                         <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
                       </Link>
                     </div>
                   </div>
-
-                  {/* Hover bottom border indicator */}
-                  <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-secondary scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100" />
                 </div>
               ))}
             </div>

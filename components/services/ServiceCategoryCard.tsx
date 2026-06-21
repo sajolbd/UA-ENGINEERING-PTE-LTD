@@ -17,7 +17,7 @@ export default function ServiceCategoryCard({
   slug,
 }: ServiceCategoryCardProps) {
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-[0_4px_25px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-[0_4px_25px_rgba(0,0,0,0.05)] transition-all duration-500 ease-in-out hover:-translate-y-2 hover:bg-primary hover:border-transparent hover:shadow-2xl">
       {/* Image Container with Zoom effect */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
         <Image
@@ -40,11 +40,11 @@ export default function ServiceCategoryCard({
 
       {/* Content */}
       <div className="flex flex-grow flex-col p-6 sm:p-8">
-        <h3 className="text-xl font-extrabold tracking-tight text-secondary transition-colors duration-300 group-hover:text-primary sm:text-2xl">
+        <h3 className="text-xl font-extrabold tracking-tight text-secondary transition-colors duration-500 group-hover:text-white sm:text-2xl">
           {title}
         </h3>
         
-        <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-600">
+        <p className="mt-3 flex-grow text-sm leading-relaxed text-slate-600 transition-colors duration-500 group-hover:text-white/80">
           {description}
         </p>
 
@@ -52,7 +52,7 @@ export default function ServiceCategoryCard({
         <div className="mt-6">
           <Link
             href={`/services/${slug}`}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl hover:shadow-secondary/20"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all duration-500 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl hover:shadow-secondary/20 group-hover:bg-white group-hover:text-primary group-hover:shadow-none"
           >
             <span>Explore Services</span>
             <ArrowRight
@@ -62,9 +62,6 @@ export default function ServiceCategoryCard({
           </Link>
         </div>
       </div>
-
-      {/* Hover bottom border indicator */}
-      <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-secondary scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100" />
     </div>
   );
 }
