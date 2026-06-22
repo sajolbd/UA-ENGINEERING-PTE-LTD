@@ -117,34 +117,42 @@ export default function ServiceCategoryPage({ params }: PageProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {category.services.map((service, index) => (
-                <div
+                <Link
                   key={service.title}
-                  className="group relative bg-white border border-slate-100/80 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 ease-in-out hover:-translate-y-2 hover:bg-primary hover:border-transparent hover:shadow-2xl flex flex-col h-full"
+                  href={`/services/${category.slug}/${service.slug}`}
+                  className="group relative flex flex-col transition-all duration-500 ease-in-out hover:-translate-y-2 filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)] hover:drop-shadow-[0_25px_50px_rgba(100,18,21,0.24)]"
                 >
-                  {/* Card Image */}
-                  <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-50 border-b border-slate-100">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 45vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
+                  <div className="w-full h-full flex flex-col rounded-2xl overflow-hidden">
+                    <div
+                      className="w-full h-full flex flex-col bg-[#FDFDFD] group-hover:bg-primary transition-all duration-500 ease-in-out"
+                      style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%)" }}
+                    >
+                      {/* Card Image */}
+                      <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-50 border-b border-slate-100/50">
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-350" />
+                        <div className="absolute top-4 left-4">
+                          <span className="inline-block rounded-md bg-white/90 backdrop-blur-sm px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary shadow-sm">
+                            Service {index + 1}
+                          </span>
+                        </div>
+                      </div>
 
-                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-secondary font-bold text-xs px-3 py-1.5 rounded-lg shadow-sm">
-                      Service {index + 1}
-                    </div>
-                  </div>
-
-                    <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                      <div className="flex-grow">
-                        <h4 className="text-xl sm:text-2xl font-extrabold text-secondary mb-3 transition-colors duration-500 group-hover:text-white">
+                      {/* Content */}
+                      <div className="p-8 flex flex-col flex-grow">
+                        <h4 className="text-xl sm:text-2xl font-bold tracking-tight text-secondary transition-colors duration-500 group-hover:text-white mb-3">
                           {service.title}
                         </h4>
-                        <p className="text-slate-600 text-sm leading-relaxed mb-3 transition-colors duration-500 group-hover:text-white/80">
+                        
+                        <p className="text-sm leading-relaxed text-slate-500 transition-colors duration-500 group-hover:text-white/80 mb-4 flex-grow">
                           {service.description}
                         </p>
 
@@ -163,19 +171,15 @@ export default function ServiceCategoryPage({ params }: PageProps) {
                             </ul>
                           </div>
                         )}
-                      </div>
 
-                    <div className="border-t border-slate-100 pt-3 mt-auto">
-                      <Link
-                        href={`/services/${category.slug}/${service.slug}`}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all duration-500 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-xl hover:shadow-secondary/20 group-hover:bg-white group-hover:text-primary group-hover:shadow-none"
-                      >
-                        <span>Learn More & Specifications</span>
-                        <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
-                      </Link>
+                        <div className="mt-auto pt-4 flex items-center gap-2 text-sm font-bold text-primary transition-colors duration-500 group-hover:text-white">
+                          <span>Learn More & Specifications</span>
+                          <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

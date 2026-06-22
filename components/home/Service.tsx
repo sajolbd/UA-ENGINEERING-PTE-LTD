@@ -102,37 +102,44 @@ export default function Service() {
             return (
               <div
                 key={service.title}
-                className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-500 ease-in-out hover:-translate-y-2 hover:bg-primary hover:shadow-2xl hover:border-transparent ${isLast ? "md:col-span-2 lg:col-span-1 lg:col-start-2" : ""
+                className={`group relative flex flex-col transition-all duration-500 ease-in-out hover:-translate-y-2 filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.12)] hover:drop-shadow-[0_25px_50px_rgba(100,18,21,0.24)] ${isLast ? "md:col-span-2 lg:col-span-1 lg:col-start-2" : ""
                   }`}
               >
-                {/* Image Wrapper */}
-                <div className="relative mb-6 h-[220px] w-full overflow-hidden rounded-xl bg-slate-100">
-                  <Image
-                    src={service.image}
-                    alt={service.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                </div>
+                <div className="w-full h-full flex flex-col rounded-2xl overflow-hidden">
+                  <div
+                    className="w-full h-full flex flex-col bg-[#FDFDFD] group-hover:bg-primary transition-all duration-500 ease-in-out"
+                    style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%)" }}
+                  >
+                    {/* Card Image */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-50 border-b border-slate-100/50">
+                      <Image
+                        src={service.image}
+                        alt={service.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-350" />
+                    </div>
 
-                {/* Content */}
-                <div className="flex flex-grow flex-col">
-                  <h3 className="text-xl font-bold tracking-tight text-secondary transition-colors duration-500 group-hover:text-white">
-                    {service.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600 transition-colors duration-500 group-hover:text-white/80 flex-grow">
-                    {service.description}
-                  </p>
+                    {/* Content */}
+                    <div className="p-8 flex flex-col flex-grow">
+                      <h3 className="text-xl font-bold tracking-tight text-secondary transition-colors duration-500 group-hover:text-white">
+                        {service.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-slate-500 transition-colors duration-500 group-hover:text-white/80 flex-grow mb-4">
+                        {service.description}
+                      </p>
 
-                  {/* Read More / Call to action link */}
-                  <div className="mt-6 flex items-center gap-2 text-sm font-bold text-primary transition-colors duration-500 group-hover:text-white">
-                    <span>Learn More</span>
-                    <ArrowRight
-                      size={16}
-                      className="transition-transform duration-500 group-hover:translate-x-1.5"
-                    />
+                      {/* Read More / Call to action link */}
+                      <div className="mt-auto flex items-center gap-2 text-sm font-bold text-primary transition-colors duration-500 group-hover:text-white">
+                        <span>Learn More</span>
+                        <ArrowRight
+                          size={16}
+                          className="transition-transform duration-500 group-hover:translate-x-1.5"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "components/shared/Container";
 
 // Custom High-Fidelity Realistic SVG Icons
@@ -158,26 +159,32 @@ const services = [
     {
         title: "Renovation & Upgrading",
         icon: RenovationIcon,
+        slug: "renovation-upgrading",
     },
     {
         title: "Structural & Exterior Works",
         icon: StructuralIcon,
+        slug: "structural-exterior-works",
     },
     {
         title: "Painting & Waterproofing",
         icon: PaintingIcon,
+        slug: "painting-waterproofing",
     },
     {
         title: "Aluminium & Glazing Works",
         icon: GlazingIcon,
+        slug: "aluminium-glazing-works",
     },
     {
         title: "Electrical, Plumbing & Aircon",
         icon: MEPIcon,
+        slug: "electrical-plumbing-aircon",
     },
     {
         title: "Solar Panel Installation",
         icon: SolarIcon,
+        slug: "solar-panel-installation",
     },
 ];
 
@@ -195,10 +202,11 @@ export default function Services() {
                 </div>
 
                 <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6">
-                    {services.map(({ title, icon: Icon }) => (
-                        <div
+                    {services.map(({ title, icon: Icon, slug }) => (
+                        <Link
                             key={title}
-                            className="group flex min-h-[180px] flex-col items-center justify-center rounded-2xl border border-slate-100 bg-white px-5 py-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:bg-secondary hover:shadow-[0_12px_30px_rgba(15,23,42,0.15)] sm:min-h-[200px]"
+                            href={`/services/${slug}`}
+                            className="group flex min-h-[180px] flex-col items-center justify-center rounded-2xl border border-slate-100 bg-white px-5 py-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:bg-primary hover:shadow-[0_12px_30px_rgba(100,18,21,0.15)] sm:min-h-[200px]"
                         >
                             <div className="relative mb-4 flex h-16 w-16 items-center justify-center">
                                 <Icon />
@@ -207,7 +215,7 @@ export default function Services() {
                             <h3 className="mt-2 text-base font-bold leading-snug text-slate-950 transition-colors duration-300 group-hover:text-white">
                                 {title}
                             </h3>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </Container>

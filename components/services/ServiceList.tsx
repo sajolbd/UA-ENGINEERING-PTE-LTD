@@ -29,8 +29,8 @@ export default function ServiceList() {
               key={category.slug}
               title={category.title}
               description={category.shortDescription}
-              image={category.featuredImage}
               slug={category.slug}
+              image={category.featuredImage}
             />
           ))}
         </div>
