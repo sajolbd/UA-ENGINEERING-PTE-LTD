@@ -1,5 +1,11 @@
 import React from "react";
 import Breadcrumb from "components/layout/Breadcrumb";
+import AboutHero from "components/about/AboutHero";
+import OurProcess from "components/about/OurProcess";
+import ResidentialServices from "components/about/ResidentialServices";
+import ServiceAreas from "components/services/ServiceAreas";
+import ContactFormSection from "components/contact/ContactFormSection";
+import AboutFAQ from "components/about/AboutFAQ";
 
 export default function AboutPage() {
   return (
@@ -9,9 +15,16 @@ export default function AboutPage() {
         description=""
         bgImage="/images/layout/about-bg.png"
       />
-      <div className="py-16 text-center text-slate-500 font-medium">
-        About content will be added here.
-      </div>
+      <AboutHero />
+      <OurProcess />
+      <ResidentialServices />
+      <ServiceAreas />
+      <ContactFormSection />
+      <AboutFAQ />
     </div>
   );
 }
+
+
+
+
