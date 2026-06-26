@@ -77,13 +77,19 @@ export default function ServiceProcess() {
                       <div className="flex items-center justify-center w-12 sm:w-16 shrink-0">
                         {isStep5 ? (
                           /* Step 5: Larger Glowing Green Circle */
-                          <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg shadow-green-500/30 border-4 border-green-150 transition-all duration-300 group-hover:scale-110">
-                            <Check size={28} strokeWidth={3} />
+                          <div className="relative flex h-14 w-14 items-center justify-center">
+                            <div className="absolute inset-0 rounded-full bg-green-500 opacity-30 animate-ping" />
+                            <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg shadow-green-500/30 border-4 border-green-150 transition-all duration-300 group-hover:scale-110">
+                              <Check size={28} strokeWidth={3} />
+                            </div>
                           </div>
                         ) : (
                           /* Steps 1-4: Standard colored check circle */
-                          <div className={`flex h-7 w-7 items-center justify-center rounded-full ${step.bgColor} text-white shadow-sm transition-all duration-300 group-hover:scale-110`}>
-                            <Check size={14} strokeWidth={3.5} />
+                          <div className="relative flex h-7 w-7 items-center justify-center">
+                            <div className={`absolute inset-0 rounded-full ${step.bgColor} opacity-40 animate-ping`} />
+                            <div className={`relative flex h-7 w-7 items-center justify-center rounded-full ${step.bgColor} text-white shadow-sm transition-all duration-300 group-hover:scale-110`}>
+                              <Check size={14} strokeWidth={3.5} />
+                            </div>
                           </div>
                         )}
                       </div>

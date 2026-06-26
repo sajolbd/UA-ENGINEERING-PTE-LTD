@@ -25,7 +25,7 @@ const servicesList = [
 
 export default function ContactFormSection() {
   const formRef = useRef<HTMLFormElement>(null);
-  
+
   // Form State
   const [formData, setFormData] = useState({
     name: "",
@@ -113,7 +113,7 @@ export default function ContactFormSection() {
     <section className="bg-white py-8 lg:py-12 border-t border-slate-100">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Column: Contact Information */}
           <div className="lg:col-span-5 space-y-8">
             <div>
@@ -131,7 +131,7 @@ export default function ContactFormSection() {
 
             {/* Info Cards */}
             <div className="space-y-4">
-              
+
               {/* Address Card */}
               <div className="flex gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-slate-50/80">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -215,7 +215,7 @@ export default function ContactFormSection() {
           {/* Right Column: Interactive Form Card */}
           <div className="lg:col-span-7">
             <div className="bg-slate-50 border border-slate-100 rounded-3xl p-6 sm:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.02)]">
-              
+
               {submitStatus === "success" ? (
                 /* Success Screen */
                 <div className="py-8 text-center space-y-6">
@@ -240,7 +240,7 @@ export default function ContactFormSection() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-2xl font-black text-secondary">
-                      Request For Quote Form
+                      Request For Form
                     </h3>
                     <p className="text-slate-500 font-bold text-sm mt-1">
                       Fill out the form below and receive a swift response within 24 hours.
@@ -248,7 +248,7 @@ export default function ContactFormSection() {
                   </div>
 
                   <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
-                    
+
                     {/* Error Alerts */}
                     {errorMessage && (
                       <div className="flex items-center gap-2.5 p-4 rounded-xl bg-red-50 border border-red-100 text-red-700 text-sm font-bold animate-pulse">
@@ -256,7 +256,7 @@ export default function ContactFormSection() {
                         <span>{errorMessage}</span>
                       </div>
                     )}
-                    
+
                     {/* Row 1: Name & Mobile */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">

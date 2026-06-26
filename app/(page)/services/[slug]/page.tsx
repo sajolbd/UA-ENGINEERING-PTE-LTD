@@ -2,16 +2,71 @@ import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ArrowLeft, Phone, Calendar, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowLeft, Phone, Calendar, ArrowRight, MessageCircle } from "lucide-react";
 import Container from "../../../../components/shared/Container";
 import Breadcrumb from "../../../../components/layout/Breadcrumb";
 import { servicesData } from "../../../../data/servicesData";
+import WhyChoose from "components/home/WhyChoose";
+import PaintingFocus from "components/services/PaintingFocus";
+import ServicePlan from "components/services/ServicePlan";
+import ServiceAreas from "components/services/ServiceAreas";
 
 interface PageProps {
   params: {
     slug: string;
   };
 }
+
+const categorySpecifications: Record<string, string[]> = {
+  "renovation-upgrading": [
+    "Full-scale interior layout, hacking, masonry, and partition wall alterations",
+    "Custom high-end kitchen cabinets, wardrobes, and carpentry solutions",
+    "Premium vinyl, homogeneous tile laying, and parquet wood floor refinishing",
+    "Integrated false ceiling, partition wall, and ambient cove lighting design",
+    "Compliance with HDB/BCA structural safety and renovation guidelines",
+    "Professional site supervision and end-to-end turnkey project management"
+  ],
+  "structural-exterior-works": [
+    "Heavy structural steel fabrication, mezzanine frames, and portal columns",
+    "Custom mild steel, wrought iron, and rust-free aluminium main gates",
+    "Premium double-laminated safety glass, polycarbonate, and metal balcony shelters",
+    "Rooftop extension structures, roof truss repairs, and complete tiling services",
+    "Motorized retractable canvas awnings, fixed sunshades, and custom facades",
+    "BCA-approved structural designs with Professional Engineer (PE) endorsement"
+  ],
+  "painting-waterproofing": [
+    "Multi-layer interior and exterior painting using premium brands (Nippon, Jotun)",
+    "Advanced surface preparation, skim coating, wall patching, and sealing",
+    "Heavy-duty polyurethane (PU) injection grouting for non-destructive leak repairs",
+    "Torch-applied bitumen membrane and multi-layer liquid waterproofing for flat roofs",
+    "High-durability waterproofing coatings for toilets, balconies, and wet areas",
+    "Strict water ponding tests to verify 100% leak-proof performance and warranty"
+  ],
+  "aluminium-glazing-works": [
+    "Custom-fabricated aluminium casement, sliding, and soundproof windows",
+    "Heavy-duty tempered and laminated safety glass doors and partitions",
+    "High-strength glass skylights and UV-blocking polycarbonate roof domes",
+    "Minimalist magnetic insect screens and retractable mosquito netting systems",
+    "Motorized outdoor windproof zip blinds for balcony weather protection",
+    "Approved window installers certified by HDB and BCA standards"
+  ],
+  "electrical-plumbing-aircon": [
+    "Licensed EMA electrical rewiring, DB upgrades, and smart home lighting installations",
+    "Sanitary plumbing, copper/PVC pipe repairs, and instant/storage water heaters",
+    "Comprehensive aircon servicing, chemical cleaning, and refrigerant top-ups",
+    "Precision troubleshooting of electrical trips, pipe leaks, and aircon compressor faults",
+    "Professional routing and neat casing solutions for all services",
+    "Full compliance with PUB, EMA, and Singapore safety standards"
+  ],
+  "solar-panel-installation": [
+    "Premium Tier-1 high-efficiency monocrystalline solar PV panels",
+    "Grid-tied and hybrid smart inverter systems with mobile app performance tracking",
+    "Certified rooftop mounting frames designed to withstand tropical wind loads",
+    "SP Group grid connection coordination and Net-Metering (selling excess power)",
+    "Complete structural roof safety evaluations and BCA submission support",
+    "Significant long-term reduction in monthly commercial and residential energy bills"
+  ]
+};
 
 // Generate static params for Next.js build optimization
 export async function generateStaticParams() {
@@ -22,6 +77,7 @@ export async function generateStaticParams() {
 
 export default function ServiceCategoryPage({ params }: PageProps) {
   const category = servicesData.find((cat) => cat.slug === params.slug);
+  const specs = category ? (categorySpecifications[category.slug] || []) : [];
 
   if (!category) {
     notFound();
@@ -63,6 +119,23 @@ export default function ServiceCategoryPage({ params }: PageProps) {
                 {category.description}
               </p>
 
+              {/* Key Specifications Grid */}
+              <div className="mt-6 border-t border-slate-100 pt-6">
+                <h4 className="text-base font-extrabold text-secondary tracking-tight mb-4">
+                  Key Specifications
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                  {specs.map((spec, i) => (
+                    <div key={i} className="flex items-start gap-2.5">
+                      <CheckCircle2 size={16} className="text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm font-semibold text-slate-600 leading-relaxed">
+                        {spec}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="https://calendly.com/uaengineering"
@@ -74,11 +147,13 @@ export default function ServiceCategoryPage({ params }: PageProps) {
                   <span>Get Free Quote</span>
                 </a>
                 <a
-                  href="#services-list"
+                  href={`https://wa.me/6598411786?text=Hello%20UA%20Engineering%2C%20I%20would%20like%20to%20discuss%20about%20${encodeURIComponent(category.title)}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-bold text-secondary transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-50"
                 >
-                  <span>Explore Services</span>
-                  <ArrowRight size={16} />
+                  <MessageCircle size={16} />
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>
@@ -151,7 +226,7 @@ export default function ServiceCategoryPage({ params }: PageProps) {
                         <h4 className="text-xl sm:text-2xl font-bold tracking-tight text-secondary transition-colors duration-500 group-hover:text-white mb-3">
                           {service.title}
                         </h4>
-                        
+
                         <p className="text-sm leading-relaxed text-slate-500 transition-colors duration-500 group-hover:text-white/80 mb-4 flex-grow">
                           {service.description}
                         </p>
@@ -217,6 +292,10 @@ export default function ServiceCategoryPage({ params }: PageProps) {
           </div>
         </Container>
       </section>
+      <ServicePlan slug={category.slug} categoryTitle={category.title} />
+      <PaintingFocus />
+      <WhyChoose />
+      <ServiceAreas />
     </div>
   );
 }
