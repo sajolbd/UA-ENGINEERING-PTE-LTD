@@ -44,7 +44,7 @@ export default function BlogPage() {
           <div className="flex flex-col lg:flex-row gap-8 items-start">
 
             {/* Left Column: Categories Navigation (Desktop only) */}
-            <div className="lg:w-[240px] shrink-0 sticky top-24 self-start lg:block hidden">
+            <div className="xl:w-[240px] shrink-0 sticky top-24 self-start xl:block hidden">
               <div className="bg-slate-50/60 border border-slate-100 p-6 rounded-2xl shadow-[0_2px_8px_rgba(0,0,0,0.01)]">
                 <h4 className="text-xs font-black tracking-wider uppercase text-slate-800 mb-5 pb-2 border-b border-slate-200/50">
                   Navigation
@@ -72,7 +72,7 @@ export default function BlogPage() {
             {/* Middle Column: Blog Feed */}
             <div className="flex-1 min-w-0 w-full">
               {/* Mobile-only category navigation bar */}
-              <div className="lg:hidden block sticky top-[64px] z-20 bg-slate-50/95 backdrop-blur-sm py-3 mb-6 -mx-4 px-4 border-b border-slate-200/50">
+              <div className="xl:hidden block sticky top-[64px] z-20 bg-slate-50/95 backdrop-blur-sm py-3 mb-6 -mx-4 px-4 border-b border-slate-200/50">
                 <div className="flex items-center gap-2 overflow-x-auto scrollbar-none whitespace-nowrap">
                   {categories.map((category) => {
                     const isActive = activeCategory === category;

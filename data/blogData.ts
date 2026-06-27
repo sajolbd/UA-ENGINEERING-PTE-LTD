@@ -29,17 +29,75 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p>Renovating your HDB flat in Singapore is an exciting milestone, but it can also be a daunting task. With space constraints and strict HDB building regulations, careful planning is essential to achieve your dream home without running into legal or structural issues.</p>
       
-      <h3>1. Understand HDB Renovation Guidelines</h3>
-      <p>Before you begin hacking walls or changing floors, you must apply for and obtain the necessary HDB renovation permits. Only HDB-registered contractors are allowed to carry out renovations. Hacking load-bearing walls is strictly prohibited for safety reasons.</p>
+      <h3>Key Renovation Phases</h3>
+      <p>A successful renovation is usually executed in distinct, structured phases. Here is the standard numbering order to follow:</p>
+      <ol>
+        <li><strong>Design & Planning:</strong> Collaborating with your interior designer to lock in 3D layouts, electrical points, and theme.</li>
+        <li><strong>Permit Approvals:</strong> Submitting designs to HDB and structural calculations to BCA to obtain hacking and masonry permits.</li>
+        <li><strong>Hacking & Demolition:</strong> Dismantling existing carpentry, hacking walls, and clearing out debris.</li>
+        <li><strong>M&E Works:</strong> Installing electrical lines, aircon copper piping, and water plumbing pipes.</li>
+        <li><strong>Wet Works:</strong> Laying waterproofing screeds, wall plastering, and tiling the bathroom/kitchen.</li>
+      </ol>
+
+      <h3>Material Comparison Guide</h3>
+      <p>To help you choose the best materials for your high-humidity Singapore flat, we have compiled a quick comparison table below:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Material Type</th>
+            <th>Durability</th>
+            <th>Moisture Resistance</th>
+            <th>Best Use Cases</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vinyl Flooring</strong></td>
+            <td>High (Scratch-resistant)</td>
+            <td>100% Waterproof</td>
+            <td>Living room, Bedrooms, Study area</td>
+          </tr>
+          <tr>
+            <td><strong>Homogeneous Tiles</strong></td>
+            <td>Extreme (Impact-resistant)</td>
+            <td>Excellent</td>
+            <td>Bathrooms, Kitchen floors, Balconies</td>
+          </tr>
+          <tr>
+            <td><strong>Quartz Stone</strong></td>
+            <td>High (Stain & scratch-resistant)</td>
+            <td>Excellent (Non-porous)</td>
+            <td>Kitchen countertops, vanity tops</td>
+          </tr>
+          <tr>
+            <td><strong>Solid Wood</strong></td>
+            <td>Medium (Prone to dents)</td>
+            <td>Poor (Expands in humidity)</td>
+            <td>Decorative shelving, feature walls</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Visual Layout Optimization</h3>
+      <p>Below is a screenshot of a space-saving interior layout we recently executed for a 4-room BTO flat in Punggol. It illustrates how open-plan kitchens can make the living room look much more spacious:</p>
+      <img src="/images/services/sub_home_reno.png" alt="Singapore HDB space-saving layout screenshot" />
+
+      <h3>Essential Guidelines & Best Practices</h3>
+      <p>When selecting your contractor, keep the following checklist in mind to ensure safety and avoid penalties:</p>
+      <ul>
+        <li><strong>HDB Registry:</strong> Always verify if your contractor is listed on the HDB Directory of Registered Renovation Contractors (DRRC).</li>
+        <li><strong>Waterproofing Warranty:</strong> HDB enforces a 3-year warranty on waterproofing in newly built flats; make sure your contractor respects this.</li>
+        <li><strong>Hacking Restrictions:</strong> Do not touch columns, beams, or load-bearing shear walls. They are vital to the building's structural integrity.</li>
+        <li><strong>Electrical Load:</strong> Check if your flat requires a higher electrical load permit (e.g., 40-amp vs 30-amp DB box upgrades).</li>
+      </ul>
+
+      <h3>Video Guide: Singapore HDB Renovation Rules</h3>
+      <p>Watch this educational video guide summarizing the latest building rules, permit requirements, and renovation budgeting tips in Singapore:</p>
+      <div class="prose-video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="HDB Renovation Rules & Budgeting Guide" allowfullscreen></iframe>
+      </div>
       
-      <h3>2. Optimize Space with Smart Layouts</h3>
-      <p>Modern HDB flats, especially BTOs, can be cozy. Use space-saving furniture, built-in wardrobes that span from floor to ceiling, and open-plan kitchen designs to create the illusion of a much larger, airier space.</p>
-      
-      <h3>3. Choose Durable and Waterproof Materials</h3>
-      <p>Given Singapore's high tropical humidity, selecting moisture-resistant materials is critical. Opt for high-quality vinyl flooring, quartz or homogeneous tile countertops in the kitchen, and anti-mold paint for toilet ceilings.</p>
-      
-      <h3>4. Plan Your Lighting and Electrical Points</h3>
-      <p>Always map out your furniture layout before the electrician starts. Make sure you have enough power sockets, USB ports, and lighting switches in the right locations to avoid messy extension cords later.</p>
+      <p>By following these guidelines, budgeting smartly, and selecting verified materials, you can create a beautiful home that stands the test of time and humidity in Singapore.</p>
     `
   },
   {

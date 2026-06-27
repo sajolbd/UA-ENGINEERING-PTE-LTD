@@ -369,3 +369,105 @@ textarea {
     animation: none;
   }
 }
+
+/* ==========================================
+   Blog Details Page prose rich text overrides
+   ========================================== */
+
+/* 1. Styled Lists (Overriding global list-style: none reset) */
+.prose ul {
+  list-style-type: disc !important;
+  margin-left: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.prose ol {
+  list-style-type: decimal !important;
+  margin-left: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.prose li {
+  margin-bottom: 0.5rem !important;
+  display: list-item !important;
+  line-height: 1.6 !important;
+  color: #475569 !important;
+  font-weight: 500 !important;
+}
+
+/* 2. Premium Styled Tables */
+.prose table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 2rem 0 !important;
+  font-size: 0.875rem !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01) !important;
+}
+
+.prose th {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  padding: 14px 18px !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  font-family: inherit;
+}
+
+.prose td {
+  padding: 14px 18px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  color: #475569 !important;
+  vertical-align: middle !important;
+  font-family: inherit;
+}
+
+.prose tr:last-child td {
+  border-bottom: none !important;
+}
+
+.prose tr:hover td {
+  background-color: #f8fafc/50 !important;
+}
+
+/* 3. Images and Screenshots Styling */
+.prose img {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+  margin: 2rem auto !important;
+  border: 1px solid #f1f5f9 !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.prose img:hover {
+  transform: scale(1.01) !important;
+}
+
+/* 4. Responsive Video Embed Wrapper */
+.prose-video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+  margin: 2rem 0;
+  border: 1px solid #f1f5f9;
+}
+
+.prose-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
