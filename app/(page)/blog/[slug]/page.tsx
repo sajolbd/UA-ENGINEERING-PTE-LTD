@@ -8,7 +8,14 @@ import Container from "../../../../components/shared/Container";
 import Breadcrumb from "../../../../components/layout/Breadcrumb";
 import BlogSidebar from "../../../../components/blog/BlogSidebar";
 import InlineShare from "../../../../components/blog/InlineShare";
-import { blogPosts } from "../../../../data/blogData";
+import { BlogPost } from "../../../../hooks/useBlogPosts";
+
+// Allow dynamic rendering so new posts appear without a rebuild
+export const dynamic = "force-dynamic";
+
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "https://ua-engineering-pte-ltd-backend-production.up.railway.app";
 
 const siteUrl = "https://ua-engineering-pte.vercel.app";
 
@@ -18,31 +25,32 @@ interface PageProps {
   };
 }
 
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
-    slug: post.slug,
-  }));
+async function getAllPosts(): Promise<BlogPost[]> {
+  try {
+    const res = await fetch(`${API_BASE}/api/blogs`, { cache: "no-store" });
+    const data = await res.json();
+    return data.success ? data.data : [];
+  } catch {
+    return [];
+  }
+}
+
+async function getPost(slug: string): Promise<BlogPost | null> {
+  const posts = await getAllPosts();
+  return posts.find((p) => p.slug === slug) || null;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const post = await getPost(params.slug);
 
   if (!post) {
-    return {
-      title: "Blog | UA Engineering",
-    };
+    return { title: "Blog | UA Engineering" };
   }
 
-  // Strip HTML tags to get plain text for description
   const plainText = post.content.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   const description = plainText.slice(0, 160);
-
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
-  // Build absolute image URL — Next.js metadataBase handles relative paths,
-  // but we explicitly build absolute to ensure compatibility with all scrapers.
-  const imageUrl = post.image.startsWith("http")
-    ? post.image
-    : `${siteUrl}${post.image}`;
+  const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
 
   return {
     title: post.title,
@@ -55,14 +63,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "UA Engineering PTE. LTD.",
       publishedTime: post.date,
       authors: [post.author],
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -73,9 +74,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-
-export default function BlogDetailPage({ params }: PageProps) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogDetailPage({ params }: PageProps) {
+  const [post, allPosts] = await Promise.all([
+    getPost(params.slug),
+    getAllPosts(),
+  ]);
 
   if (!post) {
     notFound();
@@ -98,8 +101,6 @@ export default function BlogDetailPage({ params }: PageProps) {
     const replacement = `<h3 id="${heading.id}">${heading.text}</h3>`;
     processedContent = processedContent.replace(target, replacement);
   });
-
-
 
   return (
     <div className="bg-slate-50/50 min-h-screen">
@@ -166,7 +167,6 @@ export default function BlogDetailPage({ params }: PageProps) {
                   <span className="text-xs font-bold text-slate-400">{post.date}</span>
                 </div>
 
-
                 {/* Featured Image */}
                 <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden mb-8 bg-slate-50 border border-slate-100">
                   <Image
@@ -195,7 +195,7 @@ export default function BlogDetailPage({ params }: PageProps) {
             <div className="lg:w-[280px] w-full mt-8 lg:mt-0 sticky lg:top-36 self-start">
               <BlogSidebar
                 mode="detail"
-                posts={blogPosts}
+                posts={allPosts}
                 currentPostTitle={post.title}
                 currentPostUrl={`${siteUrl}/blog/${post.slug}`}
               />

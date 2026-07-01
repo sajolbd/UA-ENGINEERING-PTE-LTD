@@ -5,9 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Swal from "sweetalert2";
 import Container from "../shared/Container";
-import { blogPosts } from "../../data/blogData";
+import { useBlogPosts } from "../../hooks/useBlogPosts";
 
 export default function FeaturedBlog() {
+  const { posts: blogPosts } = useBlogPosts();
   const [email, setEmail] = useState("");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);

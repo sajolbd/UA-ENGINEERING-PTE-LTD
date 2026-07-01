@@ -5,7 +5,7 @@ import Container from "components/shared/Container";
 import BlogCard from "components/blog/BlogCard";
 import BigBlogCard from "components/blog/BigBlogCard";
 import BlogSidebar from "components/blog/BlogSidebar";
-import { blogPosts } from "data/blogData";
+import { useBlogPosts } from "hooks/useBlogPosts";
 
 const categories = [
   "All",
@@ -19,6 +19,7 @@ const categories = [
 ];
 
 export default function BlogGrid() {
+  const { posts: blogPosts, loading } = useBlogPosts();
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredPosts = blogPosts.filter((post) => {
@@ -26,6 +27,18 @@ export default function BlogGrid() {
   });
 
   const categoriesToDisplay = categories.filter((c) => c !== "All");
+
+  if (loading) {
+    return (
+      <section className="py-10">
+        <Container>
+          <div className="flex items-center justify-center py-24">
+            <div className="w-8 h-8 border-4 border-secondary border-t-transparent rounded-full animate-spin" />
+          </div>
+        </Container>
+      </section>
+    );
+  }
 
   return (
     <section className="py-10">
