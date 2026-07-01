@@ -7,10 +7,30 @@ import ServiceProcess from "../../../components/services/ServiceProcess";
 import WhyChoose from "components/home/WhyChoose";
 import ServiceAreas from "../../../components/services/ServiceAreas";
 import Review from "components/home/Review";
+import { Metadata } from "next";
+import cmsData from "../../../data/cmsData.json";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = cmsData?.services?.seo || {};
+  return {
+    title: seo.metaTitle || "Our Services | UA Engineering",
+    description: seo.metaDescription || "Explore our commercial and industrial renovation and engineering services in Singapore.",
+    keywords: seo.metaKeywords || "substation electrical works, plumbing Singapore",
+  };
+}
 
 export default function ServicesPage() {
+  const schemaJson = cmsData?.services?.seo?.schemaJson || "";
+
   return (
     <div className="bg-white min-h-screen">
+      {/* Schema.org Structured Data */}
+      {schemaJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schemaJson }}
+        />
+      )}
       <Breadcrumb
         title="Services"
         description=""

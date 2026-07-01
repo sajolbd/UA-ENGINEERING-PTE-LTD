@@ -3,58 +3,10 @@
 import Image from "next/image";
 import Container from "components/shared/Container";
 
-const projects = [
-  {
-    title: "Commercial Plumbing Installation",
-    category: "Plumbing",
-    image: "/images/home/projects/project-plumbing.png",
-    alt: "Commercial plumbing installation at Singapore retail mall",
-  },
-  {
-    title: "Industrial Substation Electrical Works",
-    category: "Electrical",
-    image: "/images/home/projects/project-electrical.png",
-    alt: "Industrial electrical wiring and distribution panel board works",
-  },
-  {
-    title: "Foundation & Structural Waterproofing",
-    category: "Waterproofing",
-    image: "/images/home/projects/project-waterproofing.png",
-    alt: "Applying waterproof membrane on concrete foundation",
-  },
-  {
-    title: "Modern Office Drywall Fit-out",
-    category: "Drywall Partition",
-    image: "/images/home/projects/project-drywall.png",
-    alt: "Drywall partition metal framing and gypsum board installation",
-  },
-  {
-    title: "Rooftop Solar Array Grid Integration",
-    category: "Solar Installation",
-    image: "/images/home/projects/project-solar.png",
-    alt: "Commercial solar panel grid setup on flat roof",
-  },
-  {
-    title: "Luxury Condominium Lobby Tiling",
-    category: "Tiling Installation",
-    image: "/images/home/projects/project-tiling.png",
-    alt: "Precision homogeneous tile laying on lobby floors",
-  },
-  {
-    title: "Controlled Concrete Demolition",
-    category: "Hacking & Demolition",
-    image: "/images/home/projects/project-demolition.png",
-    alt: "Controlled hacking and demolition of reinforced concrete wall",
-  },
-  {
-    title: "Suspended Cove Ceiling Grid System",
-    category: "False Ceiling",
-    image: "/images/home/projects/project-ceiling.png",
-    alt: "Suspended false ceiling installation with cove lighting channels",
-  },
-];
+import { projectsData } from "../../data/projectsData";
 
 export default function CompletedProjects() {
+  const projects = projectsData.slice(0, 8);
   return (
     <section id="projects" className="bg-white py-8 lg:py-12">
       <Container>
@@ -83,7 +35,7 @@ export default function CompletedProjects() {
               <div className="relative mb-4 h-[200px] w-full overflow-hidden rounded-xl bg-slate-50">
                 <Image
                   src={project.image}
-                  alt={project.alt}
+                  alt={project.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

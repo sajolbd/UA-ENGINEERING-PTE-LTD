@@ -10,8 +10,16 @@ import {
 } from "lucide-react";
 
 import Container from "components/shared/Container";
+import cmsData from "../../data/cmsData.json";
 
 export default function AboutSection() {
+    const homeContent = cmsData?.home?.content || {};
+    const aboutHeading = homeContent.aboutHeading || "Your Trusted Partner for High Quality Renovation & Upgrading Services.";
+    const aboutSubheading = homeContent.aboutSubheading || "At UA ENGINEERING PTE. LTD. we deliver reliable Renovation & Upgrading solutions grounded in integrity, expertise, and precision. Our team ensures every project meets high standards of safety, durability, and quality workmanship.";
+    const aboutImage = homeContent.aboutImage || "/images/home/about/about-main.jpg";
+    const aboutImageAlt = homeContent.aboutImageAlt || "UA Engineering Upgrading Worksite";
+    const experienceYears = parseInt(homeContent.aboutExperience) || 15;
+
     return (
         <section className="overflow-hidden bg-white py-8 lg:py-12">
             <Container>
@@ -21,8 +29,8 @@ export default function AboutSection() {
                         {/* Main Image */}
                         <div className="relative overflow-hidden">
                             <Image
-                                src="/images/home/about/about-main.jpg"
-                                alt="UA Engineering"
+                                src={aboutImage}
+                                alt={aboutImageAlt}
                                 width={700}
                                 height={750}
                                 className="h-auto w-full object-cover"
@@ -33,7 +41,7 @@ export default function AboutSection() {
                         <div className="absolute right-0 top-8 bg-white px-5 py-4 shadow-2xl lg:right-[-30px]">
                             <div className="flex items-center gap-3">
                                 <span className="text-5xl font-bold text-primary">
-                                    15
+                                    {experienceYears}
                                 </span>
 
                                 <span className="text-lg font-semibold text-secondary">
@@ -47,11 +55,11 @@ export default function AboutSection() {
                         {/* Floating Image */}
                         <div className="absolute -bottom-10 right-5 hidden bg-white p-3 shadow-2xl md:block">
                             <Image
-                                src="/images/home/about/about-support.jpg"
-                                alt="Support Team"
-                                width={250}
-                                height={250}
-                                className="object-cover"
+                                src="/images/home/about/about-sub.jpg"
+                                alt="UA Engineering Team"
+                                width={240}
+                                height={160}
+                                className="h-auto w-full object-cover"
                             />
                         </div>
 
@@ -60,7 +68,7 @@ export default function AboutSection() {
                     </div>
 
                     {/* Right Side */}
-                    <div>
+                    <div className="flex flex-col items-start">
                         {/* Small Title */}
                         <div className="mb-4 flex items-center gap-2">
                             <Wrench className="h-5 w-5 text-primary" />
@@ -72,17 +80,12 @@ export default function AboutSection() {
 
                         {/* Main Title */}
                         <h2 className="mb-6 text-3xl font-bold leading-tight text-secondary ">
-                            Your Trusted Partner for High Quality
-                            Renovation & Upgrading Services.
+                            {aboutHeading}
                         </h2>
 
                         {/* Description */}
                         <p className="mb-10 text-base sm:text-lg leading-6 text-slate-950">
-                            At UA ENGINEERING PTE. LTD. we deliver reliable
-                            Renovation & Upgrading solutions grounded in
-                            integrity, expertise, and precision. Our team
-                            ensures every project meets high standards of
-                            safety, durability, and quality workmanship.
+                            {aboutSubheading}
                         </p>
 
                         {/* Features */}

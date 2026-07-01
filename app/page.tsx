@@ -10,10 +10,30 @@ import WhyRely from "components/home/WhyRely";
 import WhyChoose from "components/home/WhyChoose";
 import Testimonial from "components/home/Testimonial";
 import Review from "components/home/Review";
+import { Metadata } from "next";
+import cmsData from "../data/cmsData.json";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = cmsData?.home?.seo || {};
+  return {
+    title: seo.metaTitle || "UA Engineering PTE. LTD.",
+    description: seo.metaDescription || "UA Engineering PTE. LTD. provides renovation, waterproofing, steel works, roofing, electrical, plumbing, aircon, aluminium glazing and maintenance services across Singapore.",
+    keywords: seo.metaKeywords || "UA Engineering, Singapore Renovation, Waterproofing Singapore",
+  };
+}
 
 const page = () => {
+  const schemaJson = cmsData?.home?.seo?.schemaJson || "";
+
   return (
     <div>
+      {/* Schema.org Structured Data */}
+      {schemaJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schemaJson }}
+        />
+      )}
       <Hero />
       <Services />
       <CallBackSection />

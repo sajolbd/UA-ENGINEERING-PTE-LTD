@@ -9,6 +9,7 @@ import {
   MoveRight,
 } from "lucide-react";
 import Container from "components/shared/Container";
+import cmsData from "../../data/cmsData.json";
 
 const highlights = [
   { label: "Certified Workmanship", icon: Award },
@@ -18,12 +19,18 @@ const highlights = [
 ];
 
 export default function Hero() {
+  const heroContent = cmsData?.home?.content || {};
+  const heading = heroContent.heroHeading || "From Renovation to Painting, Roofing, Electrical, Plumbing and Steel Works.";
+  const subheading = heroContent.heroSubheading || "We handle it all with expertise, reliability, and guaranteed quality.";
+  const heroImage = heroContent.heroImage || "/images/home/hero/hero-bg.png";
+  const heroImageAlt = heroContent.heroImageAlt || "Hero Background Banner";
+
   return (
     <div className="bg-white">
       <section className="relative overflow-hidden bg-white lg:min-h-[calc(100vh-132px)] flex items-center py-10 sm:py-16 lg:py-24">
         <Image
-          src="/images/home/hero/hero-bg.png"
-          alt=""
+          src={heroImage}
+          alt={heroImageAlt}
           fill
           priority
           sizes="100vw"
@@ -36,13 +43,11 @@ export default function Hero() {
         <Container className="relative flex flex-col justify-center gap-6 lg:gap-8 w-full h-full">
           <div className="mx-auto w-full max-w-[1320px] pt-4 text-center sm:pt-6 lg:pt-12 xl:pt-16">
             <h1 className="mx-auto max-w-[1240px] text-3xl font-bold leading-[1.02] text-secondary sm:text-5xl">
-              From Renovation to Painting, Roofing, Electrical, Plumbing and
-              Steel Works.
+              {heading}
             </h1>
 
             <p className="mx-auto mt-4 max-w-[680px] text-center text-base font-medium leading-6 text-slate-950 sm:mt-6 sm:text-lg sm:leading-7">
-              We handle it all with expertise, reliability, and guaranteed
-              quality.
+              {subheading}
             </p>
           </div>
 

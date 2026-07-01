@@ -21,20 +21,20 @@ export interface ServiceCategory {
 
 export const servicesData: ServiceCategory[] = [
   {
-    slug: "renovation-upgrading",
-    title: "Renovation & Upgrading",
-    shortDescription: "Transform your residential, commercial, or industrial spaces with our custom renovation and space-planning solutions.",
-    description: "UA Engineering provides top-tier renovation, interior upgrading, and space optimization solutions in Singapore. From modernizing layout structures to premium custom finishes, we deliver turnkey excellence.",
-    featuredImage: "/images/services/renovation.png",
-    bgImage: "/images/layout/services-bg.png",
-    services: [
+    "slug": "renovation-upgrading",
+    "title": "Renovation & Upgrading",
+    "shortDescription": "Transform your residential, commercial, or industrial spaces with our custom renovation and space-planning solutions.",
+    "description": "UA Engineering provides top-tier renovation, interior upgrading, and space optimization solutions in Singapore. From modernizing layout structures to premium custom finishes, we deliver turnkey excellence.",
+    "featuredImage": "/images/services/renovation.png",
+    "bgImage": "/images/layout/services-bg.png",
+    "services": [
       {
-        slug: "home-renovation",
-        title: "Home Renovation",
-        image: "/images/services/sub_home_reno.png",
-        description: "Complete home remodeling, space planning, wall re-configuration, flooring, plastering, painting, and modern interior transformations.",
-        longDescription: "Our comprehensive Home Renovation service is designed to transform your existing space into your dream home. We handle everything from the initial space planning and layout drawing to hacking, partitioning, electrical rewiring, plastering, painting, and high-end custom carpentry. Our team of experienced interior engineers ensures that every square foot is optimized for functionality, comfort, and premium modern aesthetics.",
-        features: [
+        "slug": "home-renovation",
+        "title": "Home Renovation",
+        "image": "/images/services/sub_home_reno.png",
+        "description": "Complete home remodeling, space planning, wall re-configuration, flooring, plastering, painting, and modern interior transformations.",
+        "longDescription": "Our comprehensive Home Renovation service is designed to transform your existing space into your dream home. We handle everything from the initial space planning and layout drawing to hacking, partitioning, electrical rewiring, plastering, painting, and high-end custom carpentry. Our team of experienced interior engineers ensures that every square foot is optimized for functionality, comfort, and premium modern aesthetics.",
+        "features": [
           "Space Planning & Layout Design",
           "Wall Hacking & Structural Changes",
           "Premium Vinyl & Tile Flooring",
@@ -42,13 +42,13 @@ export const servicesData: ServiceCategory[] = [
           "Integrated False Ceiling & Lighting",
           "Hassle-Free Project Coordination"
         ],
-        benefits: [
+        "benefits": [
           "One-stop solution from structural hacking to custom final trim",
           "Compliance with Singapore building safety guidelines (HDB/BCA)",
           "Strict quality control with experienced site supervisors",
           "Clear, transparent cost breakdown without hidden charges"
         ],
-        process: [
+        "process": [
           "Initial consultation & site measurements",
           "Layout presentation & design rendering",
           "Obtaining necessary HDB/BCA permits",
@@ -58,12 +58,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "kitchen-renovation",
-        title: "Kitchen Renovation",
-        image: "/images/services/sub_kitchen_reno.png",
-        description: "Custom carpentry cabinets, high-durability countertops (quartz, granite, solid surface), sink and tap installation, tile backsplashes.",
-        longDescription: "The kitchen is the heart of the home, and our kitchen renovation service focuses on maximizing efficiency, durability, and elegance. We specialize in custom high-pressure laminate cabinetry with soft-close mechanisms, premium heat-resistant countertops (quartz, granite, homogeneous tiles), leak-proof plumbing fixtures, and custom-tiled backsplashes. We design layouts that optimize the kitchen work triangle for an enjoyable cooking experience.",
-        features: [
+        "slug": "kitchen-renovation",
+        "title": "Kitchen Renovation",
+        "image": "/images/services/sub_kitchen_reno.png",
+        "description": "Custom carpentry cabinets, high-durability countertops (quartz, granite, solid surface), sink and tap installation, tile backsplashes.",
+        "longDescription": "The kitchen is the heart of the home, and our kitchen renovation service focuses on maximizing efficiency, durability, and elegance. We specialize in custom high-pressure laminate cabinetry with soft-close mechanisms, premium heat-resistant countertops (quartz, granite, homogeneous tiles), leak-proof plumbing fixtures, and custom-tiled backsplashes. We design layouts that optimize the kitchen work triangle for an enjoyable cooking experience.",
+        "features": [
           "Custom Kitchen Cabinets & Drawers",
           "High-Grade Countertops (Quartz/Granite)",
           "Sink, Tap & Hood Installation",
@@ -71,13 +71,13 @@ export const servicesData: ServiceCategory[] = [
           "Sanitary Piping & Leak Protection",
           "Custom Built-In Appliance Housing"
         ],
-        benefits: [
+        "benefits": [
           "Waterproof and warp-resistant materials selected for tropical humidity",
           "High-durability surfaces that are scratch-resistant and easy to clean",
           "Seamless pipe routing to prevent kitchen sink leaks and odors",
           "Experienced carpenters delivering premium custom finishes"
         ],
-        process: [
+        "process": [
           "On-site kitchen space assessment & layout planning",
           "Material selection (Laminates, Countertops, Tiles)",
           "Old cabinets dismantling & disposal",
@@ -87,12 +87,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "room-beautification",
-        title: "Room Beautification",
-        image: "/images/services/sub_room_beautification.png",
-        description: "Custom feature walls, built-in wardrobes, custom bedframes, wallpaper installation, and ambient ceiling details.",
-        longDescription: "Our Room Beautification service transforms dull bedrooms, study rooms, and living areas into luxurious, functional spaces. We integrate decorative elements such as fluted feature walls, hidden LED lighting strips, drop ceilings, built-in study desks, vanity tables, and premium wallpaper. Every design is customized to create a warm, inviting atmosphere that reflects your personal style.",
-        features: [
+        "slug": "room-beautification",
+        "title": "Room Beautification",
+        "image": "/images/services/sub_room_beautification.png",
+        "description": "Custom feature walls, built-in wardrobes, custom bedframes, wallpaper installation, and ambient ceiling details.",
+        "longDescription": "Our Room Beautification service transforms dull bedrooms, study rooms, and living areas into luxurious, functional spaces. We integrate decorative elements such as fluted feature walls, hidden LED lighting strips, drop ceilings, built-in study desks, vanity tables, and premium wallpaper. Every design is customized to create a warm, inviting atmosphere that reflects your personal style.",
+        "features": [
           "Fluted Feature Walls & TV Consoles",
           "Hidden LED Cove Lighting Setup",
           "Custom Built-In Study Desks & Vanities",
@@ -100,13 +100,13 @@ export const servicesData: ServiceCategory[] = [
           "Bespoke Wardrobe & Bedhead Designs",
           "Space-Saving Storage Solutions"
         ],
-        benefits: [
+        "benefits": [
           "Optimizes small bedroom spaces with clever built-in furniture",
           "Creates a premium, luxurious hotel-like feel in your own home",
           "Premium quality timber materials and environment-friendly paints",
           "Fast execution with minimal disruption to your daily life"
         ],
-        process: [
+        "process": [
           "Consultation to define design themes & color palettes",
           "3D rendering of feature walls and custom carpentry",
           "Off-site fabrication of custom wooden furniture",
@@ -116,12 +116,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "open-plan-spaces",
-        title: "Create Open Plan Spaces (C&R Works)",
-        image: "/images/services/sub_open_plan.png",
-        description: "Professional structural hacking and partition removal to open up spaces for a brighter, open-concept layout.",
-        longDescription: "Creating open-plan layouts requires specialized structural knowledge to ensure building safety. We specialize in controlled hacking and demolition of partition walls to merge living, dining, and kitchen areas into a spacious, airy environment. Our structural engineers supervise all demolition works, ensuring that only non-load-bearing walls are removed and structural integrity is strictly maintained.",
-        features: [
+        "slug": "open-plan-spaces",
+        "title": "Create Open Plan Spaces (C&R Works)",
+        "image": "/images/services/sub_open_plan.png",
+        "description": "Professional structural hacking and partition removal to open up spaces for a brighter, open-concept layout.",
+        "longDescription": "Creating open-plan layouts requires specialized structural knowledge to ensure building safety. We specialize in controlled hacking and demolition of partition walls to merge living, dining, and kitchen areas into a spacious, airy environment. Our structural engineers supervise all demolition works, ensuring that only non-load-bearing walls are removed and structural integrity is strictly maintained.",
+        "features": [
           "Non-Load Bearing Wall Hacking",
           "Controlled Demolition & Debris Disposal",
           "Lintel & Structural Beam Installation",
@@ -129,13 +129,13 @@ export const servicesData: ServiceCategory[] = [
           "BCA/HDB Professional Engineer Submission",
           "Safe Isolation of Utility Pipelines"
         ],
-        benefits: [
+        "benefits": [
           "Brings natural sunlight and ventilation into dark corridors",
           "Creates a spacious, modern, and high-end feel",
           "Strict safety compliance under engineering supervision",
           "Flawless ceiling and floor leveling for seamless transitions"
         ],
-        process: [
+        "process": [
           "Floor plan analysis & site inspection by an engineer",
           "Applying for HDB/BCA structural permits",
           "Setting up safety barriers and dust protection",
@@ -145,12 +145,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "floor-renovation",
-        title: "Floor Renovation & Polishing",
-        image: "/images/services/sub_floor_reno.png",
-        description: "Premium tiles installation, luxury vinyl overlays, wood parquet sanding & varnishing, and marble/homogeneous tile polishing.",
-        longDescription: "Flooring takes the most wear and tear, and our service restores or replaces it with premium materials. We offer installation of homogeneous tiles, marble slabs, luxury vinyl tiles (LVT), and solid timber flooring. Additionally, we provide restoration services including parquet wood sanding and varnishing, marble grinding, and tile grout cleaning to make your floors shine like new.",
-        features: [
+        "slug": "floor-renovation",
+        "title": "Floor Renovation & Polishing",
+        "image": "/images/services/sub_floor_reno.png",
+        "description": "Premium tiles installation, luxury vinyl overlays, wood parquet sanding & varnishing, and marble/homogeneous tile polishing.",
+        "longDescription": "Flooring takes the most wear and tear, and our service restores or replaces it with premium materials. We offer installation of homogeneous tiles, marble slabs, luxury vinyl tiles (LVT), and solid timber flooring. Additionally, we provide restoration services including parquet wood sanding and varnishing, marble grinding, and tile grout cleaning to make your floors shine like new.",
+        "features": [
           "Homogeneous & Ceramic Tiles Laying",
           "Luxury Waterproof Vinyl Overlays",
           "Parquet Wood Sanding & Polyurethane Varnish",
@@ -158,13 +158,13 @@ export const servicesData: ServiceCategory[] = [
           "Epoxy Floor Coating for Wet Areas",
           "Sub-Floor Screeding & Leveling"
         ],
-        benefits: [
+        "benefits": [
           "Flawless alignment with laser leveling technology",
           "Waterproof, anti-slip, and wear-resistant floor finishes",
           "Eco-friendly varnishes and low-odor chemicals used",
           "Extends the lifespan of expensive wood and marble flooring"
         ],
-        process: [
+        "process": [
           "Removing old flooring or preparing sub-floor",
           "Cement screeding & leveling using laser alignment",
           "Laying tiles, vinyl, or timber planks",
@@ -174,12 +174,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "decking-work",
-        title: "Decking Work",
-        image: "/images/services/sub_decking.png",
-        description: "High-quality timber decking or WPC (Wood Plastic Composite) decking installation for balconies, patios, and pool decks.",
-        longDescription: "Our outdoor decking services expand your living space to the outdoors, creating perfect spaces for balconies, roof terraces, gardens, and swimming pool decks. We offer both natural hardwood decking (Chengal, Teak, Ironwood) and low-maintenance Wood Plastic Composite (WPC) decking. We build sturdy metal or timber sub-structures to ensure the decking remains stable, level, and well-drained.",
-        features: [
+        "slug": "decking-work",
+        "title": "Decking Work",
+        "image": "/images/services/sub_decking.png",
+        "description": "High-quality timber decking or WPC (Wood Plastic Composite) decking installation for balconies, patios, and pool decks.",
+        "longDescription": "Our outdoor decking services expand your living space to the outdoors, creating perfect spaces for balconies, roof terraces, gardens, and swimming pool decks. We offer both natural hardwood decking (Chengal, Teak, Ironwood) and low-maintenance Wood Plastic Composite (WPC) decking. We build sturdy metal or timber sub-structures to ensure the decking remains stable, level, and well-drained.",
+        "features": [
           "Wood Plastic Composite (WPC) Decking",
           "Natural Hardwood Decking (Chengal, Teak)",
           "Heavy-Duty Galvanized Iron Sub-Frames",
@@ -187,13 +187,13 @@ export const servicesData: ServiceCategory[] = [
           "Hidden Clip Fastener Installation",
           "Balcony Drainage Hatch Integration"
         ],
-        benefits: [
+        "benefits": [
           "WPC decking is splinter-free, rot-resistant, and low-maintenance",
           "Natural Chengal is highly durable against tropical outdoor weather",
           "Termite-treated sub-structures for long-term safety",
           "Precision edge cutting and seamless joint alignments"
         ],
-        process: [
+        "process": [
           "Site inspection, measurement, and leveling design",
           "Sub-frame fabrication (timber or galvanized metal)",
           "Lay decking planks with drainage gap offsets",
@@ -205,20 +205,20 @@ export const servicesData: ServiceCategory[] = [
     ]
   },
   {
-    slug: "structural-exterior-works",
-    title: "Structural & Exterior Works",
-    shortDescription: "Heavy-duty steel works, gates, awnings, and extension solutions engineered for structural safety and durability.",
-    description: "Our structural engineering and exterior solutions are built for durability, weather resilience, and architectural compliance. We design, fabricate, and install robust metal structures, gates, grills, and protective shelters.",
-    featuredImage: "/images/services/structural.png",
-    bgImage: "/images/layout/projects-bg.png",
-    services: [
+    "slug": "structural-exterior-works",
+    "title": "Structural & Exterior Works",
+    "shortDescription": "Heavy-duty steel works, gates, awnings, and extension solutions engineered for structural safety and durability.",
+    "description": "Our structural engineering and exterior solutions are built for durability, weather resilience, and architectural compliance. We design, fabricate, and install robust metal structures, gates, grills, and protective shelters.",
+    "featuredImage": "/images/services/structural.png",
+    "bgImage": "/images/layout/projects-bg.png",
+    "services": [
       {
-        slug: "steel-work",
-        title: "All Kinds of Steel Work",
-        image: "/images/services/sub_steel_work.png",
-        description: "Heavy structural steel fabrication, structural beam installation, safety reinforcements, metal welding, and custom metal supports.",
-        longDescription: "We provide professional metal engineering and heavy structural steel works for residential extensions, commercial buildings, and industrial plants. We specialize in fabricating and erecting steel portal frames, structural support columns, mezzanine floors, and steel reinforcements. All works are executed by certified welders and designed in compliance with Singapore's BCA structural safety codes.",
-        features: [
+        "slug": "steel-work",
+        "title": "All Kinds of Steel Work",
+        "image": "/images/services/sub_steel_work.png",
+        "description": "Heavy structural steel fabrication, structural beam installation, safety reinforcements, metal welding, and custom metal supports.",
+        "longDescription": "We provide professional metal engineering and heavy structural steel works for residential extensions, commercial buildings, and industrial plants. We specialize in fabricating and erecting steel portal frames, structural support columns, mezzanine floors, and steel reinforcements. All works are executed by certified welders and designed in compliance with Singapore's BCA structural safety codes.",
+        "features": [
           "Structural Steel I-Beam Installation",
           "Mezzanine Floor Steel Framing",
           "Certified Welding & Metal Cutting",
@@ -226,13 +226,13 @@ export const servicesData: ServiceCategory[] = [
           "Custom Metal Bracket Fabrication",
           "Professional Engineer (PE) Inspections"
         ],
-        benefits: [
+        "benefits": [
           "High structural load-bearing capacity designed by engineers",
           "Anti-rust zinc chromate primers protect steel from Singapore's moisture",
           "BCA and MOM compliant safety procedures on-site",
           "Precise off-site prefabrication for quick on-site assembly"
         ],
-        process: [
+        "process": [
           "Architectural drawing review & load calculations",
           "Steel material procurement & cut-to-size specs",
           "Off-site fabrication, welding & priming",
@@ -242,12 +242,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "gate-grill-work",
-        title: "Main Gate & Grill Work",
-        image: "/images/services/sub_gate_grill.png",
-        description: "Fabrication and installation of modern wrought iron, mild steel, or rust-free aluminium main gates and window safety grills.",
-        longDescription: "Enhance your property's security and curb appeal with our custom gates and window safety grills. We design, fabricate, and install heavy-duty mild steel gates, rust-resistant aluminium gates, and wrought iron gates. We also offer window safety grills in various modern horizontal or vertical layout designs, keeping children and pets safe while matching your interior aesthetic.",
-        features: [
+        "slug": "gate-grill-work",
+        "title": "Main Gate & Grill Work",
+        "image": "/images/services/sub_gate_grill.png",
+        "description": "Fabrication and installation of modern wrought iron, mild steel, or rust-free aluminium main gates and window safety grills.",
+        "longDescription": "Enhance your property's security and curb appeal with our custom gates and window safety grills. We design, fabricate, and install heavy-duty mild steel gates, rust-resistant aluminium gates, and wrought iron gates. We also offer window safety grills in various modern horizontal or vertical layout designs, keeping children and pets safe while matching your interior aesthetic.",
+        "features": [
           "Custom Mild Steel & Wrought Iron Gates",
           "Rust-Free Aluminium Window Grills",
           "Powder Coating in Matte Black, Grey, and White",
@@ -255,13 +255,13 @@ export const servicesData: ServiceCategory[] = [
           "Digital Lock Bracket Integration",
           "Sliding and Swing Window Grills"
         ],
-        benefits: [
+        "benefits": [
           "Extremely durable gates that do not sag or warp over time",
           "Powder-coated finishes that resist scratching, chipping, and rust",
           "Sleek and slim profiles that maximize ventilation and light",
           "Perfect integration with smart door locks and auto-gate systems"
         ],
-        process: [
+        "process": [
           "Site measurement & design design catalog review",
           "Custom gate framing & design welding",
           "Galvanizing treatment & high-temp powder coating",
@@ -271,12 +271,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "balcony-shelter",
-        title: "Balcony Shelter Work",
-        image: "/images/services/sub_balcony_shelter.png",
-        description: "Sturdy balcony roofing using premium laminated glass, high-impact polycarbonate sheets, or aluminium profile roof cladding.",
-        longDescription: "Our Balcony Shelter service allows you to use your balcony space regardless of Singapore's sudden rain or hot sun. We engineer lightweight yet strong steel or aluminium support frames to hold premium double-laminated glass panels, UV-blocking polycarbonate sheets, or insulated aluminium roof panels. Each shelter is custom-built with integrated gutters and downpipes for rain control.",
-        features: [
+        "slug": "balcony-shelter",
+        "title": "Balcony Shelter Work",
+        "image": "/images/services/sub_balcony_shelter.png",
+        "description": "Sturdy balcony roofing using premium laminated glass, high-impact polycarbonate sheets, or aluminium profile roof cladding.",
+        "longDescription": "Our Balcony Shelter service allows you to use your balcony space regardless of Singapore's sudden rain or hot sun. We engineer lightweight yet strong steel or aluminium support frames to hold premium double-laminated glass panels, UV-blocking polycarbonate sheets, or insulated aluminium roof panels. Each shelter is custom-built with integrated gutters and downpipes for rain control.",
+        "features": [
           "Double-Laminated Safety Glass Roofing",
           "UV-Blocking Polycarbonate Shelters",
           "Aluminium Profile Insulated Cladding",
@@ -284,13 +284,13 @@ export const servicesData: ServiceCategory[] = [
           "Rainwater Gutter & Downpipe Setup",
           "Wind-Load Structurally Approved Design"
         ],
-        benefits: [
+        "benefits": [
           "Keeps rain splash and scorching sun away from your living room",
           "Safety laminated glass prevents shattering in case of impact",
           "Polycarbonate sheets filter out 99% of harmful UV rays",
           "Engineered to withstand high wind speeds in high-rise buildings"
         ],
-        process: [
+        "process": [
           "Site assessment, wind calculations, and structural design",
           "Frame welding, priming, and painting works",
           "Mounting support brackets to structural concrete walls",
@@ -300,12 +300,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "roof-extension",
-        title: "Roof Extension & Solutions",
-        image: "/images/services/sub_roof_extension.png",
-        description: "Commercial and residential roof extension planning, roofing tile installation, roof truss repair, and weatherproofing.",
-        longDescription: "We provide comprehensive roofing services including building new roof extensions, repairing damaged roof structures, and installing advanced insulation. Whether you need a metal profile roof extension for a factory warehouse, or structural wood/metal trusses for a landed property, we handle the engineering, waterproofing, and tile laying with precision to ensure a leak-free structure.",
-        features: [
+        "slug": "roof-extension",
+        "title": "Roof Extension & Solutions",
+        "image": "/images/services/sub_roof_extension.png",
+        "description": "Commercial and residential roof extension planning, roofing tile installation, roof truss repair, and weatherproofing.",
+        "longDescription": "We provide comprehensive roofing services including building new roof extensions, repairing damaged roof structures, and installing advanced insulation. Whether you need a metal profile roof extension for a factory warehouse, or structural wood/metal trusses for a landed property, we handle the engineering, waterproofing, and tile laying with precision to ensure a leak-free structure.",
+        "features": [
           "Rooftop Extension Framing",
           "Clay/Concrete Tile & Metal Sheet Laying",
           "Insulated Sandwich Panels (Heat Reduction)",
@@ -313,13 +313,13 @@ export const servicesData: ServiceCategory[] = [
           "Truss Repair & Safety Reinforcement",
           "Complete Roof Underlay Waterproofing"
         ],
-        benefits: [
+        "benefits": [
           "Adds valuable dry workspace or living space to your property",
           "Saves energy bills with heat-reflective roof insulation layers",
           "Brings peace of mind with heavy-duty waterproofing underlays",
           "Full compliance with Singapore building and zoning guidelines"
         ],
-        process: [
+        "process": [
           "Structural check of existing walls & load requirements",
           "Fabricating roof trusses (mild steel or treated timber)",
           "Erecting roof framework & fixing underlay membranes",
@@ -329,12 +329,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "awning-shelter",
-        title: "Awning Shelter Fabrication & Installation",
-        image: "/images/services/sub_awning.png",
-        description: "Fabrication of fixed canvas awnings, retractable motorized awnings, and polycarbonate sun shelters.",
-        longDescription: "Our Awning Shelter service is ideal for commercial shopfronts, cafes, landed patios, and balconies. We design and install both fixed canvas awnings and smart retractable motorized awnings. We use premium water-resistant, UV-coated outdoor acrylic fabrics from top global brands (like Sunbrella) paired with heavy-duty powder-coated aluminium arms for smooth retraction.",
-        features: [
+        "slug": "awning-shelter",
+        "title": "Awning Shelter Fabrication & Installation",
+        "image": "/images/services/sub_awning.png",
+        "description": "Fabrication of fixed canvas awnings, retractable motorized awnings, and polycarbonate sun shelters.",
+        "longDescription": "Our Awning Shelter service is ideal for commercial shopfronts, cafes, landed patios, and balconies. We design and install both fixed canvas awnings and smart retractable motorized awnings. We use premium water-resistant, UV-coated outdoor acrylic fabrics from top global brands (like Sunbrella) paired with heavy-duty powder-coated aluminium arms for smooth retraction.",
+        "features": [
           "Motorized Retractable Awnings with Remote Control",
           "Fixed Canvas Awnings in Custom Shapes",
           "Premium UV-Resistant Sunbrella Fabrics",
@@ -342,13 +342,13 @@ export const servicesData: ServiceCategory[] = [
           "Wind Sensor Auto-Retraction Integration",
           "Custom Logo Printing for Shopfronts"
         ],
-        benefits: [
+        "benefits": [
           "Provides temporary shade and retracts easily when not in use",
           "Highly durable outdoor fabric that resists mold, fading, and tearing",
           "Adds a stylish, European-cafe vibe to patios and shops",
           "Protects interior furniture from sun-bleaching"
         ],
-        process: [
+        "process": [
           "Site measurement & color matching with fabric samples",
           "Awning frame fabrication & sewing fabric panels",
           "Anchoring heavy brackets to concrete pillars/walls",
@@ -360,20 +360,20 @@ export const servicesData: ServiceCategory[] = [
     ]
   },
   {
-    slug: "painting-waterproofing",
-    title: "Painting & Waterproofing",
-    shortDescription: "Professional interior/exterior painting and advanced waterproofing solutions to protect and beautify your assets.",
-    description: "Protect your property from tropical weather and water damage. We provide comprehensive interior and exterior painting services along with advanced waterproofing solutions.",
-    featuredImage: "/images/services/painting.png",
-    bgImage: "/images/layout/breadcrumb-bg.png",
-    services: [
+    "slug": "painting-waterproofing",
+    "title": "Painting & Waterproofing",
+    "shortDescription": "Professional interior/exterior painting and advanced waterproofing solutions to protect and beautify your assets.",
+    "description": "Protect your property from tropical weather and water damage. We provide comprehensive interior and exterior painting services along with advanced waterproofing solutions.",
+    "featuredImage": "/images/services/painting.png",
+    "bgImage": "/images/layout/breadcrumb-bg.png",
+    "services": [
       {
-        slug: "painting-services",
-        title: "Painting Services",
-        image: "/images/services/sub_painting.jpg",
-        description: "Professional residential, commercial, and industrial painting using top-grade brands (Nippon, Jotun) for long-lasting finishes.",
-        longDescription: "Our professional Painting Services cover houses, commercial offices, and exterior facades. We prioritize thorough preparation, including crack patching, sanding, sealer coating, and moisture checking. We use top-grade paints (like Nippon Paint Odour-less or Jotun Jotashield) to ensure a smooth, durable, washable, and eco-friendly finish that protects your walls for years.",
-        features: [
+        "slug": "painting-services",
+        "title": "Painting Services",
+        "image": "/images/services/sub_painting.jpg",
+        "description": "Professional residential, commercial, and industrial painting using top-grade brands (Nippon, Jotun) for long-lasting finishes.",
+        "longDescription": "Our professional Painting Services cover houses, commercial offices, and exterior facades. We prioritize thorough preparation, including crack patching, sanding, sealer coating, and moisture checking. We use top-grade paints (like Nippon Paint Odour-less or Jotun Jotashield) to ensure a smooth, durable, washable, and eco-friendly finish that protects your walls for years.",
+        "features": [
           "Interior Wall & Ceiling Painting",
           "Exterior Weatherproof Coating (Landed/Commercial)",
           "Skim Coating & Wall Patching",
@@ -381,13 +381,13 @@ export const servicesData: ServiceCategory[] = [
           "Eco-Friendly Low-VOC Odorless Paint Options",
           "Timber Varnish & Metal Enamel Painting"
         ],
-        benefits: [
+        "benefits": [
           "Smooth, flawless finishes with premium color matching",
           "Prevents peeling and flaking with premium base sealers",
           "Safer indoor air quality for kids and pets",
           "Experienced painters with careful floor & furniture wrapping"
         ],
-        process: [
+        "process": [
           "Moving & wrapping furniture with plastic sheets",
           "Wall preparation (scraping loose paint, patching cracks)",
           "Applying prime sealer coat (critical for durability)",
@@ -397,12 +397,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "waterproofing-solutions",
-        title: "Waterproofing Solutions",
-        image: "/images/services/sub_waterproofing.png",
-        description: "Advanced waterproofing for toilets, concrete roofs, balconies, wet areas using PU injection or torch-on membranes.",
-        longDescription: "Water leakage can cause structural damage and mold. We provide advanced waterproofing solutions for roofs, toilets, balconies, basements, and swimming pools. We specialize in non-destructive polyurethane (PU) injection grouting for concrete cracks, torch-applied bitumen membranes for flat roofs, and multi-layer cementitious coatings for wet areas.",
-        features: [
+        "slug": "waterproofing-solutions",
+        "title": "Waterproofing Solutions",
+        "image": "/images/services/sub_waterproofing.png",
+        "description": "Advanced waterproofing for toilets, concrete roofs, balconies, wet areas using PU injection or torch-on membranes.",
+        "longDescription": "Water leakage can cause structural damage and mold. We provide advanced waterproofing solutions for roofs, toilets, balconies, basements, and swimming pools. We specialize in non-destructive polyurethane (PU) injection grouting for concrete cracks, torch-applied bitumen membranes for flat roofs, and multi-layer cementitious coatings for wet areas.",
+        "features": [
           "PU Grout Injection (No-Hacking Leak Repair)",
           "Torch-Applied Bitumen Membrane Roofing",
           "Liquid Polyurethane Waterproofing Coatings",
@@ -410,13 +410,13 @@ export const servicesData: ServiceCategory[] = [
           "Concrete Wall Crack PU Sealing",
           "Ponding Test Verification"
         ],
-        benefits: [
+        "benefits": [
           "Stops active leaks instantly without dusty demolition",
           "Provides a long-lasting barrier against heavy tropical downpours",
           "Prevents hazardous mold and concrete spalling",
           "Backed by structural warranty for peace of mind"
         ],
-        process: [
+        "process": [
           "Thermal imaging leak detection & moisture mapping",
           "Preparing concrete substrate (cleaning, crack routing)",
           "Drilling injection ports & PU grouting under pressure",
@@ -428,20 +428,20 @@ export const servicesData: ServiceCategory[] = [
     ]
   },
   {
-    slug: "aluminium-glazing-works",
-    title: "Aluminium & Glazing Works",
-    shortDescription: "Premium aluminium window frames, glass doors, skylights, mosquito nets, and motorized zip blinds.",
-    description: "UA Engineering delivers high-precision aluminium fabrication and glass glazing works. Enhance your home with sleek windows, doors, safety barriers, and blinds.",
-    featuredImage: "/images/services/aluminium.png",
-    bgImage: "/images/layout/about-bg.png",
-    services: [
+    "slug": "aluminium-glazing-works",
+    "title": "Aluminium & Glazing Works",
+    "shortDescription": "Premium aluminium window frames, glass doors, skylights, mosquito nets, and motorized zip blinds.",
+    "description": "UA Engineering delivers high-precision aluminium fabrication and glass glazing works. Enhance your home with sleek windows, doors, safety barriers, and blinds.",
+    "featuredImage": "/images/services/aluminium.png",
+    "bgImage": "/images/layout/about-bg.png",
+    "services": [
       {
-        slug: "aluminium-glass",
-        title: "Aluminium & Glass Installation & Repair",
-        image: "/images/services/sub_aluminium_glass.png",
-        description: "Custom fabrication and installation of casement windows, sliding doors, glass partition panels, and window repairs.",
-        longDescription: "We manufacture and install premium aluminium casement windows, sliding doors, glass partitions, and glass balustrades. We offer double-glazed, tempered, or laminated safety glass configurations that reduce outdoor street noise and heat. We also provide repair services for loose window hinges, handles, and rollers to ensure smooth opening.",
-        features: [
+        "slug": "aluminium-glass",
+        "title": "Aluminium & Glass Installation & Repair",
+        "image": "/images/services/sub_aluminium_glass.png",
+        "description": "Custom fabrication and installation of casement windows, sliding doors, glass partition panels, and window repairs.",
+        "longDescription": "We manufacture and install premium aluminium casement windows, sliding doors, glass partitions, and glass balustrades. We offer double-glazed, tempered, or laminated safety glass configurations that reduce outdoor street noise and heat. We also provide repair services for loose window hinges, handles, and rollers to ensure smooth opening.",
+        "features": [
           "Aluminium Casement & Sliding Windows",
           "Double-Glazed Soundproof Glass Doors",
           "Tempered Glass Shower Screens",
@@ -449,13 +449,13 @@ export const servicesData: ServiceCategory[] = [
           "Window Handle, Friction Stay, Hinge Repairs",
           "Laminated Glass Balustrades & Railings"
         ],
-        benefits: [
+        "benefits": [
           "BCA-approved window installation specialists",
           "Reduces noise levels by up to 50% with double glazing",
           "Improves thermal efficiency, reducing aircon bills",
           "Rust-proof frames engineered for high-salinity coastal areas"
         ],
-        process: [
+        "process": [
           "Precise laser window measurements",
           "Aluminium frame cutting & glass assembly at workshop",
           "Safely dismantling and recycling old windows/doors",
@@ -465,12 +465,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "skylight-installation",
-        title: "Skylight Installation",
-        image: "/images/services/sub_skylight.png",
-        description: "High-strength laminated glass skylights or polycarbonate skylight domes designed to maximize natural daylight.",
-        longDescription: "Our Skylight Installation service is designed for landed homes and commercial spaces looking to bring in natural daylight. We build leak-proof, heavy-duty structural frames holding heat-reflective, laminated safety glass or durable polycarbonate panels. This reduces the need for artificial lighting during the day while filtering out harmful UV rays and heat.",
-        features: [
+        "slug": "skylight-installation",
+        "title": "Skylight Installation",
+        "image": "/images/services/sub_skylight.png",
+        "description": "High-strength laminated glass skylights or polycarbonate skylight domes designed to maximize natural daylight.",
+        "longDescription": "Our Skylight Installation service is designed for landed homes and commercial spaces looking to bring in natural daylight. We build leak-proof, heavy-duty structural frames holding heat-reflective, laminated safety glass or durable polycarbonate panels. This reduces the need for artificial lighting during the day while filtering out harmful UV rays and heat.",
+        "features": [
           "Laminated Safety Glass Skylights",
           "Heat-Reflective Low-E Glass options",
           "UV-Resistant Polycarbonate Domes",
@@ -478,13 +478,13 @@ export const servicesData: ServiceCategory[] = [
           "Acoustic Dampening Gaskets",
           "Architectural Integration with Ceilings"
         ],
-        benefits: [
+        "benefits": [
           "Maximizes natural daylight, creating a bright and positive mood",
           "Reduces daytime lighting electricity bills",
           "Low-E glass coatings reflect heat, keeping interiors cool",
           "Double sealing ensures zero water leaks even during storms"
         ],
-        process: [
+        "process": [
           "Roof structure check & opening fabrication",
           "Welding steel structural support frame",
           "Applying weatherproofing flashings around the frame",
@@ -494,12 +494,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "mosquito-net",
-        title: "Mosquito Net Installation",
-        image: "/images/services/sub_mosquito_net.png",
-        description: "Magnetic insect screens, custom sliding screen doors, and retractable roller mosquito netting to keep pests out.",
-        longDescription: "Enjoy fresh outdoor breeze without worrying about dengue-carrying mosquitoes, flies, or pests. We customize high-durability magnetic mosquito nets, sliding mesh screens, and roll-up insect netting for casement windows, sliding doors, and louvres. The screens use premium fibreglass or stainless steel mesh that is virtually invisible and easy to clean.",
-        features: [
+        "slug": "mosquito-net",
+        "title": "Mosquito Net Installation",
+        "image": "/images/services/sub_mosquito_net.png",
+        "description": "Magnetic insect screens, custom sliding screen doors, and retractable roller mosquito netting to keep pests out.",
+        "longDescription": "Enjoy fresh outdoor breeze without worrying about dengue-carrying mosquitoes, flies, or pests. We customize high-durability magnetic mosquito nets, sliding mesh screens, and roll-up insect netting for casement windows, sliding doors, and louvres. The screens use premium fibreglass or stainless steel mesh that is virtually invisible and easy to clean.",
+        "features": [
           "Magnetic Window Mosquito Screens",
           "Retractable Roller Netting Systems",
           "Heavy-Duty Stainless Steel Insect Mesh",
@@ -507,13 +507,13 @@ export const servicesData: ServiceCategory[] = [
           "Custom Sliding Insect Screen Doors",
           "Washable & Rust-Proof Net Materials"
         ],
-        benefits: [
+        "benefits": [
           "Protects your family from mosquitoes, flies, and lizards",
           "Allows 100% natural breeze, reducing aircon usage",
           "Minimalist design that does not block views or light",
           "Easy to detach, wash, and reinstall in seconds"
         ],
-        process: [
+        "process": [
           "Measuring window and door frame dimensions",
           "Choosing frame colors to match existing window frames",
           "Fabricating frames & tensioning fibreglass mesh",
@@ -523,12 +523,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "zip-blinds",
-        title: "Zip Blind & All Types of Blind Fabrication & Installation",
-        image: "/images/services/sub_zip_blinds.png",
-        description: "Outdoor motorized zip blinds for balconies, Venetian blinds, roller blinds, and blackout shades.",
-        longDescription: "Our outdoor motorized Zip Blinds are Singapore's favorite solution for converting hot, wet balconies into functional indoor-like rooms. The blind's fabric is locked into side tracks to resist strong winds and heavy rain splash. We also fabricate and install indoor roller blinds, wooden Venetian blinds, and vertical blinds for offices and homes.",
-        features: [
+        "slug": "zip-blinds",
+        "title": "Zip Blind & All Types of Blind Fabrication & Installation",
+        "image": "/images/services/sub_zip_blinds.png",
+        "description": "Outdoor motorized zip blinds for balconies, Venetian blinds, roller blinds, and blackout shades.",
+        "longDescription": "Our outdoor motorized Zip Blinds are Singapore's favorite solution for converting hot, wet balconies into functional indoor-like rooms. The blind's fabric is locked into side tracks to resist strong winds and heavy rain splash. We also fabricate and install indoor roller blinds, wooden Venetian blinds, and vertical blinds for offices and homes.",
+        "features": [
           "Motorized Outdoor Zip Blinds",
           "Heavy-Duty Windproof Track Systems",
           "UV-Blocking & Rain-Resistant Screen Fabrics",
@@ -536,13 +536,13 @@ export const servicesData: ServiceCategory[] = [
           "Indoor Venetian & Roller Blinds",
           "Custom Fabric Selection (Blackout/Semi-Sheer)"
         ],
-        benefits: [
+        "benefits": [
           "Expands your living room space out to the balcony",
           "Blocks 90%+ of rain splash and heavy wind during storms",
           "Provides immediate privacy from nearby neighbors",
           "Easily integrates with Google Home / Alexa smart automation"
         ],
-        process: [
+        "process": [
           "Balcony dimensions measurement & wind exposure check",
           "Selecting fabric color, transparency, and motor brand",
           "Installing heavy-duty top cassettes & side tracks",
@@ -554,20 +554,20 @@ export const servicesData: ServiceCategory[] = [
     ]
   },
   {
-    slug: "electrical-plumbing-aircon",
-    title: "Electrical, Plumbing & Aircon",
-    shortDescription: "Certified EMA electrical wiring, leak repair, sanitations, and aircon maintenance services.",
-    description: "We provide comprehensive building mechanical, electrical, and plumbing (MEP) services. Our licensed professionals handle complete building wiring, plumbing repairs, and expert air-conditioner troubleshooting.",
-    featuredImage: "/images/services/mep.png",
-    bgImage: "/images/layout/blog-bg.png",
-    services: [
+    "slug": "electrical-plumbing-aircon",
+    "title": "Electrical, Plumbing & Aircon",
+    "shortDescription": "Certified EMA electrical wiring, leak repair, sanitations, and aircon maintenance services.",
+    "description": "We provide comprehensive building mechanical, electrical, and plumbing (MEP) services. Our licensed professionals handle complete building wiring, plumbing repairs, and expert air-conditioner troubleshooting.",
+    "featuredImage": "/images/services/mep.png",
+    "bgImage": "/images/layout/blog-bg.png",
+    "services": [
       {
-        slug: "electrical-lighting",
-        title: "Electrical & Lighting Work",
-        image: "/images/services/sub_electrical.png",
-        description: "Full-scale building electrical rewiring, DB box upgrades, power sockets, ceiling fan installation, and light fixtures.",
-        longDescription: "We provide certified residential and commercial electrical services. Our licensed EMA electricians handle full home rewiring, distribution board (DB) box replacements, circuit breaker upgrades, smart switch setups, ceiling fan mountings, and decorative lighting installations. We ensure all works comply with local SS638 electrical safety standards.",
-        features: [
+        "slug": "electrical-lighting",
+        "title": "Electrical & Lighting Work",
+        "image": "/images/services/sub_electrical.png",
+        "description": "Full-scale building electrical rewiring, DB box upgrades, power sockets, ceiling fan installation, and light fixtures.",
+        "longDescription": "We provide certified residential and commercial electrical services. Our licensed EMA electricians handle full home rewiring, distribution board (DB) box replacements, circuit breaker upgrades, smart switch setups, ceiling fan mountings, and decorative lighting installations. We ensure all works comply with local SS638 electrical safety standards.",
+        "features": [
           "Licensed EMA Electrician Services",
           "Whole-House Electrical Rewiring",
           "Distribution Board (DB) Upgrades",
@@ -575,13 +575,13 @@ export const servicesData: ServiceCategory[] = [
           "Ceiling Fan & Chandelier Mounting",
           "Electrical Fault Finding & Troubleshooting"
         ],
-        benefits: [
+        "benefits": [
           "Prevents short circuits, overloaded breakers, and fire hazards",
           "Ensures full safety compliance with EMA regulations",
           "Neat routing using PVC casings or concealed conduits",
           "Quick response for sudden power outages or tripping issues"
         ],
-        process: [
+        "process": [
           "Reviewing power load requirements & drawing single line maps",
           "Laying safety cables & running conduits (concealed or surface)",
           "Installing switches, sockets, DB boards, and lights",
@@ -591,12 +591,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "plumbing-services",
-        title: "Plumbing Services",
-        image: "/images/services/sub_plumbing.png",
-        description: "Sanitary plumbing installations, pipe leakage repair, water heater replacement, drain choke clearing, and pipe replacement.",
-        longDescription: "Our professional plumbing service covers all commercial and residential needs. We repair copper and PVC pipe leaks, clear clogged toilet bowls or kitchen sinks, replace instant and storage water heaters, and install modern kitchen and bathroom sanitary wares. We use high-grade plumbing joints and pressure testing to ensure leak-free results.",
-        features: [
+        "slug": "plumbing-services",
+        "title": "Plumbing Services",
+        "image": "/images/services/sub_plumbing.png",
+        "description": "Sanitary plumbing installations, pipe leakage repair, water heater replacement, drain choke clearing, and pipe replacement.",
+        "longDescription": "Our professional plumbing service covers all commercial and residential needs. We repair copper and PVC pipe leaks, clear clogged toilet bowls or kitchen sinks, replace instant and storage water heaters, and install modern kitchen and bathroom sanitary wares. We use high-grade plumbing joints and pressure testing to ensure leak-free results.",
+        "features": [
           "Copper & PVC Pipe Leak Repairs",
           "Sink, Toilet Bowl & Basin Unclogging",
           "Storage & Instant Water Heater Installation",
@@ -604,13 +604,13 @@ export const servicesData: ServiceCategory[] = [
           "Water Pressure Pump Installations",
           "Main Water Supply Pipe Replacements"
         ],
-        benefits: [
+        "benefits": [
           "Immediate leak resolution, preventing water damage and mold",
           "Ensures clean, odorless water flow with correct traps",
           "Storage heaters installed with approved safety pressure valves",
           "PUB licensed plumber coordination when required"
         ],
-        process: [
+        "process": [
           "Site inspection to locate leakage source or choke point",
           "Providing repair options & plumbing parts catalog",
           "Shutting off water main & cutting out old pipes/fittings",
@@ -620,12 +620,12 @@ export const servicesData: ServiceCategory[] = [
         ]
       },
       {
-        slug: "aircon-repair",
-        title: "Aircon Repair",
-        image: "/images/services/sub_aircon.jpg",
-        description: "Professional air conditioner servicing, chemical washing, coolant gas top-ups, system diagnosis, and compressor repairs.",
-        longDescription: "Keep your indoor air cool and clean in Singapore's tropical heat. We offer regular aircon servicing, deep chemical wash overhauls, refrigerant gas top-ups, drainage pipe vacuuming (to stop water leaking), and troubleshooting of compressor or fan motor failures. We handle all major aircon brands like Daikin, Mitsubishi Electric, Panasonic, and system configs.",
-        features: [
+        "slug": "aircon-repair",
+        "title": "Aircon Repair",
+        "image": "/images/services/sub_aircon.jpg",
+        "description": "Professional air conditioner servicing, chemical washing, coolant gas top-ups, system diagnosis, and compressor repairs.",
+        "longDescription": "Keep your indoor air cool and clean in Singapore's tropical heat. We offer regular aircon servicing, deep chemical wash overhauls, refrigerant gas top-ups, drainage pipe vacuuming (to stop water leaking), and troubleshooting of compressor or fan motor failures. We handle all major aircon brands like Daikin, Mitsubishi Electric, Panasonic, and system configs.",
+        "features": [
           "General Aircon Cleaning & Servicing",
           "Deep Chemical Wash / Overhaul",
           "Coolant Gas Leak Check & Top-Up",
@@ -633,13 +633,13 @@ export const servicesData: ServiceCategory[] = [
           "Compressor & Fan Motor Diagnosis & Repair",
           "Smart Thermostat & Controller Setup"
         ],
-        benefits: [
+        "benefits": [
           "Restores icy cold air flow and optimizes cooling speed",
           "Saves up to 20% on electricity bills by cleaning clogged coils",
           "Improves indoor air purity, filtering out dust, mold, and allergens",
           "Prevents messy water dripping damage to your walls and floors"
         ],
-        process: [
+        "process": [
           "Checking air temp, fan speed, and checking error codes",
           "Cleaning filters, front panel, and water tray",
           "Vacuuming water drainage pipe to clear jelly/slime build-up",
@@ -651,20 +651,20 @@ export const servicesData: ServiceCategory[] = [
     ]
   },
   {
-    slug: "solar-panel-installation",
-    title: "Solar Panel Installation",
-    shortDescription: "Eco-friendly residential and commercial rooftop solar panel systems to reduce utility bills.",
-    description: "Transition to green energy with our certified solar panel installation services. We design and install high-efficiency solar photovoltaic (PV) systems.",
-    featuredImage: "/images/services/solar.png",
-    bgImage: "/images/layout/contact-bg.png",
-    services: [
+    "slug": "solar-panel-installation",
+    "title": "Solar Panel Installation",
+    "shortDescription": "Eco-friendly residential and commercial rooftop solar panel systems to reduce utility bills.",
+    "description": "Transition to green energy with our certified solar panel installation services. We design and install high-efficiency solar photovoltaic (PV) systems.",
+    "featuredImage": "/images/services/solar.png",
+    "bgImage": "/images/layout/contact-bg.png",
+    "services": [
       {
-        slug: "solar-panel",
-        title: "Solar Panel Installation",
-        image: "/images/services/sub_solar.png",
-        description: "Complete design, engineering, and installation of rooftop solar PV systems to offset electricity bills.",
-        longDescription: "Transitioning to green energy is made simple with our turnkey Solar Panel Installation service. We cater to landed residential properties, commercial offices, and industrial warehouses in Singapore. We manage the entire lifecycle: structural roof load evaluations, solar PV panel layout drawings, high-efficiency solar panel procurement, power inverter setups, grid connections with SP Group, and Net-Metering configurations to sell excess power back to the grid.",
-        features: [
+        "slug": "solar-panel",
+        "title": "Solar Panel Installation",
+        "image": "/images/services/sub_solar.png",
+        "description": "Complete design, engineering, and installation of rooftop solar PV systems to offset electricity bills.",
+        "longDescription": "Transitioning to green energy is made simple with our turnkey Solar Panel Installation service. We cater to landed residential properties, commercial offices, and industrial warehouses in Singapore. We manage the entire lifecycle: structural roof load evaluations, solar PV panel layout drawings, high-efficiency solar panel procurement, power inverter setups, grid connections with SP Group, and Net-Metering configurations to sell excess power back to the grid.",
+        "features": [
           "High-Efficiency Tier-1 Monocrystalline Solar Panels",
           "Hybrid & Grid-Tied Inverter Systems",
           "Rooftop Mounting Rail & Safety Harness Setup",
@@ -672,13 +672,13 @@ export const servicesData: ServiceCategory[] = [
           "Real-Time Solar Power Yield App Setup",
           "BCA Structural submission & PE Endorsements"
         ],
-        benefits: [
+        "benefits": [
           "Reduces electricity bills by up to 50% to 80% every month",
           "Earns income by exporting excess solar energy back to SP Group",
           "Protects the roof from direct sun rays, lowering top-floor temps",
           "Adds significant eco-friendly value to your landed property"
         ],
-        process: [
+        "process": [
           "Site survey to analyze shadow casting and roof structural safety",
           "PV layout design and estimation of monthly energy savings",
           "Submitting drawings for BCA & SP Group grid approval",
